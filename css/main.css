@@ -1685,7 +1685,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #740fb8;
+  background: #a1b5c3;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2909,4 +2909,53 @@ hr {
     width: auto;
     text-align: center;
   }
+}
+a {
+  border-bottom: 1px dashed #999;
+}
+.menu .menu-item {
+  margin-left: 10px;
+}
+.menu .menu-item a {
+  color: #fff;
+  background: #bbb;
+}
+.menu .menu-item a:hover {
+  background: #222;
+}
+.posts-expand .post-title,
+.posts-expand .post-meta {
+  text-align: center;
+}
+.posts-expand .post-meta {
+  color: #f27006;
+}
+.posts-expand .post-meta a {
+  color: #f27006;
+  border-bottom: none;
+}
+.posts-expand .post-meta a:hover {
+  color: #28bc6e;
+  border-bottom-color: #00ff80;
+}
+.post-button {
+  margin-top: 20px;
+  text-align: center;
+}
+.post-button .btn {
+  border: 2px solid #42b983;
+  text-decoration: none;
+  color: #42b983;
+  background: #fff;
+  border-radius: 8px;
+  line-height: 2;
+  padding: 0 10px;
+}
+.post-button .btn:hover {
+  border-color: #42b983;
+  color: #fff;
+  background: #42b983;
+}
+.post-button a {
+  margin: 0 !important;
 }
