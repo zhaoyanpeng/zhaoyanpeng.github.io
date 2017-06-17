@@ -1685,7 +1685,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #1d1396;
+  background: #d0f2eb;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2913,6 +2913,15 @@ hr {
 a {
   border-bottom: 1px dashed #999;
 }
+.oops-left {
+  text-align: left;
+}
+.oops-right {
+  text-align: right;
+}
+.oops-center {
+  text-align: center;
+}
 .menu .menu-item {
   margin-left: 10px;
 }
@@ -2938,8 +2947,16 @@ a {
   color: #28bc6e;
   border-bottom-color: #00ff80;
 }
+.posts-expand ul,
+.posts-expand li {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
 .posts-expand ul {
   font-family: 'Times New Roman';
+}
+.posts-expand li {
+  line-height: 1.5;
 }
 .post-button {
   margin-top: 20px;
@@ -2961,4 +2978,41 @@ a {
 }
 .post-button a {
   margin: 0 !important;
+}
+table.oops-table {
+  margin: 20px 0;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #ddd;
+  font-family: 'Times New Roman';
+  font-size: 14px;
+  table-layout: fixed;
+  word-wrap: break-all;
+}
+table.oops-table>tbody>tr:nth-of-type(odd) {
+  background-color: transparent;
+}
+table.oops-table>tbody>tr:hover {
+  background-color: transparent;
+}
+caption,
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  vertical-align: middle;
+  font-weight: normal;
+}
+table.oops-table th,
+td {
+  border-bottom: 3px solid #ddd;
+  border-right: 1px solid #eee;
+}
+table.oops-table th {
+  padding-bottom: 10px;
+  font-weight: 700;
+}
+table.oops-table td {
+  border-bottom-width: 1px;
 }
