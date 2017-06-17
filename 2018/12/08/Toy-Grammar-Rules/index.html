@@ -1,0 +1,1128 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Toy-Grammars," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Yann's Pages" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="Grammar Rules$S$ or $R$ is used as the root node in the following discussion, so $O(S)=S(R)=1$.    Binary Rules (w) Unary Rules (w) Lexicons (w) Possible Chain Rules     D-&amp;gt;BC (2)E-&amp;gt;BC (3)F-&amp;gt;">
+<meta name="keywords" content="Toy-Grammars">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Toy Grammar Rules">
+<meta property="og:url" content="http://zhaoyanpeng.cn/2018/12/08/Toy-Grammar-Rules/index.html">
+<meta property="og:site_name" content="Yann&#39;s Pages">
+<meta property="og:description" content="Grammar Rules$S$ or $R$ is used as the root node in the following discussion, so $O(S)=S(R)=1$.    Binary Rules (w) Unary Rules (w) Lexicons (w) Possible Chain Rules     D-&amp;gt;BC (2)E-&amp;gt;BC (3)F-&amp;gt;">
+<meta property="og:updated_time" content="2017-06-17T15:00:30.897Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Toy Grammar Rules">
+<meta name="twitter:description" content="Grammar Rules$S$ or $R$ is used as the root node in the following discussion, so $O(S)=S(R)=1$.    Binary Rules (w) Unary Rules (w) Lexicons (w) Possible Chain Rules     D-&amp;gt;BC (2)E-&amp;gt;BC (3)F-&amp;gt;">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"hide","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '1WITN1PXQI',
+      apiKey: 'ace8c5afca8e49dc084909dc23a1f0c4',
+      indexName: 'Github Pages',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://zhaoyanpeng.cn/2018/12/08/Toy-Grammar-Rules/"/>
+
+
+
+
+
+  <title>Toy Grammar Rules | Yann's Pages</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Yann's Pages</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+            About
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zhaoyanpeng.cn/2018/12/08/Toy-Grammar-Rules/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yanpeng Zhao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/default_avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yann's Pages">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Toy Grammar Rules</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-08T09:10:50+08:00">
+                2018-12-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Test/" itemprop="url" rel="index">
+                    <span itemprop="name">Test</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/12/08/Toy-Grammar-Rules/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/12/08/Toy-Grammar-Rules/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/12/08/Toy-Grammar-Rules/" class="leancloud_visitors" data-flag-title="Toy Grammar Rules">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Grammar-Rules"><a href="#Grammar-Rules" class="headerlink" title="Grammar Rules"></a>Grammar Rules</h1><p>$S$ or $R$ is used as the root node in the following discussion, so $O(S)=S(R)=1$.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Binary Rules (w)</th>
+<th style="text-align:center">Unary Rules (w)</th>
+<th style="text-align:center">Lexicons (w)</th>
+<th style="text-align:center">Possible Chain Rules</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>D-&gt;BC</code> (2)<br><code>E-&gt;BC</code> (3)<br><code>F-&gt;BC</code> (4)<br><code>S-&gt;AD</code> (2)<br><code>S-&gt;AE</code> (3)<br><code>S-&gt;AF</code> (3)<br><code>S-&gt;AG</code> (2)</td>
+<td style="text-align:center"><code>F-&gt;E</code> (2)<br><code>E-&gt;D</code> (3)<br><code>G-&gt;E</code> (3)</td>
+<td style="text-align:center"><code>A-&gt;w0</code> (2)<br><code>B-&gt;w1</code> (2)<br><code>C-&gt;w2</code> (1)</td>
+<td style="text-align:center"><code>null</code><br><code>F-&gt;E</code><br><code>G-&gt;E</code><br><code>E-&gt;D</code><br><code>F-&gt;E-&gt;D</code><br><code>G-&gt;E-&gt;D</code></td>
+</tr>
+</tbody>
+</table>
+<a id="more"></a>
+<p>When you draw out all the possible parse trees which span the sentence <code>w0,w1,w2</code>, you could find the only differences among parse trees are the choices of chain rules. We only consider chain unary rules of length less than or equal to 2 in weighted context free grammar, and define 3 levels for inside scores and outside scores of the nonterminals involved in such rules. Level index that ranges from 0 to 2 increases from the bottom up (top down) in the inside score (outside score). Each level <code>L</code> contains nonterminals that are exactly the upmost (bottommost) ones  in the chain unary rules of length <code>L</code> in the inside score (outside score).</p>
+<h1 id="Inside-Scores-amp-Outside-Scores"><a href="#Inside-Scores-amp-Outside-Scores" class="headerlink" title="Inside Scores &amp; Outside Scores"></a>Inside Scores &amp; Outside Scores</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">Levels</th>
+<th style="text-align:center">Inside Scores (w)</th>
+<th style="text-align:center">Outside Scores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center"><code>I0(D) = w(D-&gt;BC)I(B)I(C)=4</code><br><code>I0(E) = w(E-&gt;BC)I(B)I(C)=6</code><br><code>I0(F) = w(F-&gt;BC)I(B)I(C)=8</code></td>
+<td style="text-align:center"><code>O0(D) = I(A)w(S-&gt;AD)O(S)=4</code><br><code>O0(E) = I(A)w(S-&gt;AE)O(S)=6</code><br><code>O0(F) = I(A)w(S-&gt;AF)O(S)=6</code><br><code>O0(G) = I(A)w(S-&gt;AG)O(S)=4</code></td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center"><code>I1(E) = w(E-&gt;D)I0(D)=12</code><br><code>I1(F) = w(F-&gt;E)I0(E)=12</code><br><code>I1(G) = w(G-&gt;E)I0(E)=18</code></td>
+<td style="text-align:center"><code>O1(D) = w(E-&gt;D)O0(E)=18</code><br><code>O1(E) = w(F-&gt;E)O0(F) + w(G-&gt;E)O0(G)=24</code></td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center"><code>I2(F) = w(F-&gt;E)I1(E)=24</code><br><code>I2(G) = w(G-&gt;E)I1(E)=36</code></td>
+<td style="text-align:center"><code>O2(D) = w(E-&gt;D)O1(E)=72</code></td>
+</tr>
+</tbody>
+</table>
+<p>From inside scores of chain unary rules in the above table, we can compute the score of the sentence $w_{0}w_{1}w_{2}$ as</p>
+
+\begin{align}
+I(S) = I(A)\sum_{X \in \mathbf{X}} w(S \rightarrow AX)\sum_{i = 0, 1, 2} I_{i}(X),
+\end{align}
+
+<p>where $S$ is the root node, $\mathbf{X}$ is the nonterminal set, $ w(S \rightarrow AX) = I_{i}(X) = 0 $ if such rules or inside scores do not exist. And</p>
+
+\begin{align*}
+I(S) &= 2 \cdot ((4 \times 2 + 6 \times 3 + 8 \times 3) \\
+&+ (12 \times 3 + 12 \times 3 + 18 \times 2) + (24 \times 3 + 36 \times 2)) \\
+&= ((16 + 36 + 46) + (72 + 72 + 72) + (144 + 144))
+\end{align*}
+
+<h2 id="Additional-Grammar-Rules"><a href="#Additional-Grammar-Rules" class="headerlink" title="Additional Grammar Rules"></a>Additional Grammar Rules</h2><p>We introduce a constant M to represent the weight of the partial parse trees that dominate $ w_{2}w_{3} $ and replace $S$ with $J, K, L$. Then we add the additional grammar rules presented in the following table. The chain unary rules starting with $R$ are not included in possible chain rules.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Binary Rules (w)</th>
+<th style="text-align:center">Unary Rules (w)</th>
+<th style="text-align:center">Lexicons (w)</th>
+<th style="text-align:center">Possible Chain Rules</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>J-&gt;AM</code> (2)<br> <code>K-&gt;AM</code> (1)<br> <code>L-&gt;AM</code> (3)</td>
+<td style="text-align:center"><code>K-&gt;J</code> (2)<br><code>L-&gt;K</code> (3)<br><code>R-&gt;J</code> (3)<br> <code>R-&gt;K</code> (2)<br> <code>R-&gt;L</code> (1)</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><code>null</code><br><code>K-&gt;J</code><br><code>L-&gt;K</code><br><code>L-&gt;K-&gt;J</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Levels</th>
+<th style="text-align:center">Inside Scores (w)</th>
+<th style="text-align:center">Outside Scores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center"><code>I0(J) = w(J-&gt;AM)I(A)I(M)=4M</code><br><code>I0(K) = w(K-&gt;AM)I(A)I(M)=2M</code><br><code>I0(L) = w(L-&gt;AM)I(A)I(M)=6M</code></td>
+<td style="text-align:center"><code>O0(J) = w(R-&gt;J)O(R)=3</code><br><code>O0(K) = w(R-&gt;K)O(R)=2</code><br><code>O0(L) = w(R-&gt;L)O(R)=1</code></td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center"><code>I1(K) = w(K-&gt;J)I0(J)=8M</code><br><code>I1(L) = w(L-&gt;K)I0(K)=6M</code></td>
+<td style="text-align:center"><code>O1(J) = w(K-&gt;J)O0(K)=4</code><br><code>O1(K) = w(L-&gt;K)O0(L)=3</code></td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center"><code>I2(L) = w(L-&gt;K)I1(K)=24M</code></td>
+<td style="text-align:center"><code>O2(J) = w(K-&gt;J)O1(K)=6</code></td>
+</tr>
+</tbody>
+</table>
+
+\begin{align*}
+I(R) &= ((3 \times 4M + 2 \times 2M + 1 \times 6M) + (2 \times 8M + 1 \times 6M) + (1 \times 24M)) \\
+&= ((12M + 4M + 6M) + (16M + 6M) + (24M))
+\end{align*}
+
+<h2 id="Counts-of-Binary-Rule-c-S-rightarrow-AX"><a href="#Counts-of-Binary-Rule-c-S-rightarrow-AX" class="headerlink" title="Counts of Binary Rule $c(S \rightarrow AX)$"></a>Counts of Binary Rule $c(S \rightarrow AX)$</h2><p>For any nonterminal $X$, we need to find all its occurances in three levels. When $X = D$,</p>
+
+\begin{align*}
+c(S \rightarrow AD) &= I(A) O(S) w(S \rightarrow AD) I(D) \\
+&= I(A) w(S \rightarrow AD) \sum_{j = 0, 1, 2}O_{j}(S)  \sum_{i = 0, 1, 2} I_{i}(D) \\
+\end{align*}
+
+
+\begin{align*}
+c(J \rightarrow AM) &= w(R \rightarrow J)w(J \rightarrow AM)w(A \rightarrow w_{1})M \\
+&+  w(R \rightarrow K)w(K \rightarrow J)w(J \rightarrow AM)w(A \rightarrow w_{1})M \\
+&+ w(R \rightarrow L)w(L \rightarrow K)w(K \rightarrow J)w(J \rightarrow AM)w(A \rightarrow w_{1})M \\
+&= 12M + 16M + 24M = 52M \\
+&= \color{red}{ I(A)w(J \rightarrow AM)O(J)M} \\
+&= \color{red}{ I(A)w(J \rightarrow AM)\sum_{i = 0,1,2}O_{i}(J)M} \\
+&= 2 \times 2 \times (3 + 4 + 6)M = 52M
+\end{align*}
+
+<h2 id="Counts-of-Unary-Rule-c-X-rightarrow-Y"><a href="#Counts-of-Unary-Rule-c-X-rightarrow-Y" class="headerlink" title="Counts of Unary Rule $c(X \rightarrow Y)$"></a>Counts of Unary Rule $c(X \rightarrow Y)$</h2>
+\begin{align*}
+c(X \rightarrow Y) &= \{c(X \rightarrow Y) | X \rightarrow Y \text{ is the chain rule of length 1}\} \\
+&+ \{\sum_{Z \in \mathbf{X}} c(X \rightarrow Y \rightarrow Z) + c(Z \rightarrow X \rightarrow Y) | X \rightarrow Y \text{ is involved in the chain rule of length 2}\} \\
+&= w(X \rightarrow Y)(O_{0}(X)I_{0}(Y) + O_{0}(X)I_{1}(Y) + O_{1}(X)I_{0}(D))
+\end{align*}
+
+<p>Let $X = E, Y = D$, we can verify the above formula.</p>
+<p>The scores of all the parse trees containing the unary rule $E \rightarrow D$ is</p>
+
+\begin{align*}
+c(E \rightarrow D) &= \sum_{T \sim w_{0}w_{1}w_{2} \text{ and } E \rightarrow D \in T} w(T) \\
+&= w(A \rightarrow w_{0}) w(S \rightarrow AE) w(E \rightarrow D) w(D \rightarrow BC) w(B \rightarrow w_{1}) w(C \rightarrow w_{2}) \\
+&+ w(A \rightarrow w_{0}) w(S \rightarrow AE) w(F \rightarrow E) w(E \rightarrow D) w(D \rightarrow BC) w(B \rightarrow w_{1}) w(C \rightarrow w_{2}) \\
+&+ w(A \rightarrow w_{0}) w(S \rightarrow AE) w(G \rightarrow E) w(E \rightarrow D) w(D \rightarrow BC) w(B \rightarrow w_{1}) w(C \rightarrow w_{2}) \\
+&= 2 \times 3 \times 3 \times 2 \times 2 \times 1 \\
+&+ 2 \times 3 \times 2 \times 3 \times 2 \times 2 \times 1 \\
+&+ 2 \times 2 \times 3 \times 3 \times 2 \times 2 \times 1 \\
+&= 72 + 144 + 144 \\
+&= \color{red}{w(E \rightarrow D)(O_{0}(E)I_{0}(D) + O_{1}(E)I_{0}(D))} \\
+&= 3 \times (6 \times 4 + 24 \times 4) \\
+&= 72 + 288
+\end{align*}
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>Post author:</strong>
+      Yanpeng Zhao
+    </li>
+    <li class="post-copyright-link">
+      <strong>Post link:</strong>
+      <a href="http://zhaoyanpeng.cn/2018/12/08/Toy-Grammar-Rules/" title="Toy Grammar Rules">http://zhaoyanpeng.cn/2018/12/08/Toy-Grammar-Rules/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>Copyright Notice: </strong>
+      All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Toy-Grammars/" rel="tag"># Toy-Grammars</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/16/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/default_avatar.jpg"
+               alt="Yanpeng Zhao" />
+          <p class="site-author-name" itemprop="name">Yanpeng Zhao</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">categories</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/zhaoyanpeng" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Grammar-Rules"><span class="nav-number">1.</span> <span class="nav-text">Grammar Rules</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Inside-Scores-amp-Outside-Scores"><span class="nav-number">2.</span> <span class="nav-text">Inside Scores & Outside Scores</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Additional-Grammar-Rules"><span class="nav-number">2.1.</span> <span class="nav-text">Additional Grammar Rules</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Counts-of-Binary-Rule-c-S-rightarrow-AX"><span class="nav-number">2.2.</span> <span class="nav-text">Counts of Binary Rule $c(S \rightarrow AX)$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Counts-of-Unary-Rule-c-X-rightarrow-Y"><span class="nav-number">2.3.</span> <span class="nav-text">Counts of Unary Rule $c(X \rightarrow Y)$</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yanpeng Zhao</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://oops-disqus.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://zhaoyanpeng.cn/2018/12/08/Toy-Grammar-Rules/';
+          this.page.identifier = '2018/12/08/Toy-Grammar-Rules/';
+          this.page.title = 'Toy Grammar Rules';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://oops-disqus.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.1"></script>
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("YWI4s7PoFGd3hQgwd5m9UaAt-gzGzoHsz", "UAuxob54eOL9ifPOpPA0GgrO");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
