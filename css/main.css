@@ -1685,7 +1685,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #d0f2eb;
+  background: #ffff20;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2984,7 +2984,7 @@ table.oops-table {
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
-  border: 1px solid #ddd;
+  border: 1px solid transparent;
   font-family: 'Times New Roman';
   font-size: 14px;
   table-layout: fixed;
@@ -2996,7 +2996,7 @@ table.oops-table>tbody>tr:nth-of-type(odd) {
 table.oops-table>tbody>tr:hover {
   background-color: transparent;
 }
-caption,
+table.oops-table caption,
 th,
 td {
   padding: 8px;
@@ -3006,8 +3006,8 @@ td {
 }
 table.oops-table th,
 td {
-  border-bottom: 3px solid #ddd;
-  border-right: 1px solid #eee;
+  border-bottom: 3px solid transparent;
+  border-right: 1px solid transparent;
 }
 table.oops-table th {
   padding-bottom: 10px;

@@ -4,9 +4,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://zhaoyanpeng.cn/"/>
+  <link href="http://blog.zhaoyanpeng.cn/"/>
   <updated>2017-06-17T15:00:30.897Z</updated>
-  <id>http://zhaoyanpeng.cn/</id>
+  <id>http://blog.zhaoyanpeng.cn/</id>
   
   <author>
     <name>Yanpeng Zhao</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Toy Grammar Rules</title>
-    <link href="http://zhaoyanpeng.cn/2018/12/08/Toy-Grammar-Rules/"/>
-    <id>http://zhaoyanpeng.cn/2018/12/08/Toy-Grammar-Rules/</id>
+    <link href="http://blog.zhaoyanpeng.cn/2018/12/08/Toy-Grammar-Rules/"/>
+    <id>http://blog.zhaoyanpeng.cn/2018/12/08/Toy-Grammar-Rules/</id>
     <published>2018-12-08T01:10:50.000Z</published>
     <updated>2017-06-17T15:00:30.897Z</updated>
     
@@ -201,17 +201,17 @@ c(E \rightarrow D) &= \sum_{T \sim w_{0}w_{1}w_{2} \text{ and } E \rightarrow D 
     
     </summary>
     
-      <category term="Test" scheme="http://zhaoyanpeng.cn/categories/Test/"/>
+      <category term="Test" scheme="http://blog.zhaoyanpeng.cn/categories/Test/"/>
     
     
-      <category term="Toy-Grammars" scheme="http://zhaoyanpeng.cn/tags/Toy-Grammars/"/>
+      <category term="Toy-Grammars" scheme="http://blog.zhaoyanpeng.cn/tags/Toy-Grammars/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://zhaoyanpeng.cn/2017/06/16/hello-world/"/>
-    <id>http://zhaoyanpeng.cn/2017/06/16/hello-world/</id>
+    <link href="http://blog.zhaoyanpeng.cn/2017/06/16/hello-world/"/>
+    <id>http://blog.zhaoyanpeng.cn/2017/06/16/hello-world/</id>
     <published>2017-06-16T13:06:41.976Z</published>
     <updated>2017-06-17T14:59:06.366Z</updated>
     
@@ -236,7 +236,7 @@ c(E \rightarrow D) &= \sum_{T \sim w_{0}w_{1}w_{2} \text{ and } E \rightarrow D 
     
     </summary>
     
-      <category term="Test" scheme="http://zhaoyanpeng.cn/categories/Test/"/>
+      <category term="Test" scheme="http://blog.zhaoyanpeng.cn/categories/Test/"/>
     
     
   </entry>
