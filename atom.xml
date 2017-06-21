@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.zhaoyanpeng.cn/"/>
-  <updated>2017-06-17T15:00:30.897Z</updated>
+  <updated>2017-06-21T12:30:18.292Z</updated>
   <id>http://blog.zhaoyanpeng.cn/</id>
   
   <author>
@@ -16,13 +16,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Toy Grammar Rules</title>
-    <link href="http://blog.zhaoyanpeng.cn/2018/12/08/Toy-Grammar-Rules/"/>
-    <id>http://blog.zhaoyanpeng.cn/2018/12/08/Toy-Grammar-Rules/</id>
+    <title>CYK with Unary Rules</title>
+    <link href="http://blog.zhaoyanpeng.cn/2018/12/08/CYK-with-Unary-Rules/"/>
+    <id>http://blog.zhaoyanpeng.cn/2018/12/08/CYK-with-Unary-Rules/</id>
     <published>2018-12-08T01:10:50.000Z</published>
-    <updated>2017-06-17T15:00:30.897Z</updated>
+    <updated>2017-06-21T12:30:18.292Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Grammar-Rules"><a href="#Grammar-Rules" class="headerlink" title="Grammar Rules"></a>Grammar Rules</h1><p>$S$ or $R$ is used as the root node in the following discussion, so $O(S)=S(R)=1$.</p>
+    <content type="html"><![CDATA[<h1 id="Grammar-Rules"><a href="#Grammar-Rules" class="headerlink" title="Grammar Rules"></a>Grammar Rules</h1><p>$S$ or $R$ is used as the root node in the following discussion, so $O(S)=O(R)=1$.</p>
 <table>
 <thead>
 <tr>
@@ -42,7 +42,7 @@
 </tbody>
 </table>
 <a id="more"></a>
-<p>When you draw out all the possible parse trees which span the sentence <code>w0,w1,w2</code>, you could find the only differences among parse trees are the choices of chain rules. We only consider chain unary rules of length less than or equal to 2 in weighted context free grammar, and define 3 levels for inside scores and outside scores of the nonterminals involved in such rules. Level index that ranges from 0 to 2 increases from the bottom up (top down) in the inside score (outside score). Each level <code>L</code> contains nonterminals that are exactly the upmost (bottommost) ones  in the chain unary rules of length <code>L</code> in the inside score (outside score).</p>
+<p>When you draw out all the possible parse trees spanning the sentence <code>w0,w1,w2</code>, you could find the only difference among these parse trees is about the choices of chain rules. We only consider chain unary rules of length less than or equal to 2 in weighted context free grammar, and define 3 levels for inside scores and outside scores of nonterminals involved in such chains. Level index that ranges from 0 to 2 increases from the bottom up (top down) for inside scores (outside scores). Each level <code>L</code> contains nonterminals that are exactly the upmost (bottommost) ones in the chain unary rules of length <code>L</code> for inside scores (outside scores).</p>
 <h1 id="Inside-Scores-amp-Outside-Scores"><a href="#Inside-Scores-amp-Outside-Scores" class="headerlink" title="Inside Scores &amp; Outside Scores"></a>Inside Scores &amp; Outside Scores</h1><table>
 <thead>
 <tr>
@@ -69,7 +69,7 @@
 </tr>
 </tbody>
 </table>
-<p>From inside scores of chain unary rules in the above table, we can compute the score of the sentence $w_{0}w_{1}w_{2}$ as</p>
+<p>From inside scores in the chain unary rules in the above table, we can compute the score of the sentence $w_{0}w_{1}w_{2}$ as</p>
 
 \begin{align}
 I(S) = I(A)\sum_{X \in \mathbf{X}} w(S \rightarrow AX)\sum_{i = 0, 1, 2} I_{i}(X),
@@ -83,7 +83,7 @@ I(S) &= 2 \cdot ((4 \times 2 + 6 \times 3 + 8 \times 3) \\
 &= ((16 + 36 + 46) + (72 + 72 + 72) + (144 + 144))
 \end{align*}
 
-<h2 id="Additional-Grammar-Rules"><a href="#Additional-Grammar-Rules" class="headerlink" title="Additional Grammar Rules"></a>Additional Grammar Rules</h2><p>We introduce a constant M to represent the weight of the partial parse trees that dominate $ w_{2}w_{3} $ and replace $S$ with $J, K, L$. Then we add the additional grammar rules presented in the following table. The chain unary rules starting with $R$ are not included in possible chain rules.</p>
+<h2 id="Additional-Grammar-Rules"><a href="#Additional-Grammar-Rules" class="headerlink" title="Additional Grammar Rules"></a>Additional Grammar Rules</h2><p>We introduce a constant M to represent the weight of the partial parse trees that dominate $ w_{2}w_{3} $ and replace $S$ with $J, K, L$. Also we add the additional grammar rules presented in the following table. The chain unary rules starting with $R$ are not included in possible chain rules.</p>
 <table>
 <thead>
 <tr>
@@ -160,7 +160,7 @@ c(X \rightarrow Y) &= \{c(X \rightarrow Y) | X \rightarrow Y \text{ is the chain
 \end{align*}
 
 <p>Let $X = E, Y = D$, we can verify the above formula.</p>
-<p>The scores of all the parse trees containing the unary rule $E \rightarrow D$ is</p>
+<p>The score of all the parse trees containing the unary rule $E \rightarrow D$ is</p>
 
 \begin{align*}
 c(E \rightarrow D) &= \sum_{T \sim w_{0}w_{1}w_{2} \text{ and } E \rightarrow D \in T} w(T) \\
@@ -179,7 +179,7 @@ c(E \rightarrow D) &= \sum_{T \sim w_{0}w_{1}w_{2} \text{ and } E \rightarrow D 
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Grammar-Rules&quot;&gt;&lt;a href=&quot;#Grammar-Rules&quot; class=&quot;headerlink&quot; title=&quot;Grammar Rules&quot;&gt;&lt;/a&gt;Grammar Rules&lt;/h1&gt;&lt;p&gt;$S$ or $R$ is used as the root node in the following discussion, so $O(S)=S(R)=1$.&lt;/p&gt;
+      &lt;h1 id=&quot;Grammar-Rules&quot;&gt;&lt;a href=&quot;#Grammar-Rules&quot; class=&quot;headerlink&quot; title=&quot;Grammar Rules&quot;&gt;&lt;/a&gt;Grammar Rules&lt;/h1&gt;&lt;p&gt;$S$ or $R$ is used as the root node in the following discussion, so $O(S)=O(R)=1$.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -201,19 +201,21 @@ c(E \rightarrow D) &= \sum_{T \sim w_{0}w_{1}w_{2} \text{ and } E \rightarrow D 
     
     </summary>
     
-      <category term="Test" scheme="http://blog.zhaoyanpeng.cn/categories/Test/"/>
+      <category term="Parsing" scheme="http://blog.zhaoyanpeng.cn/categories/Parsing/"/>
     
     
-      <category term="Toy-Grammars" scheme="http://blog.zhaoyanpeng.cn/tags/Toy-Grammars/"/>
+      <category term="CYK" scheme="http://blog.zhaoyanpeng.cn/tags/CYK/"/>
+    
+      <category term="Toy Grammars" scheme="http://blog.zhaoyanpeng.cn/tags/Toy-Grammars/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://blog.zhaoyanpeng.cn/2017/06/16/hello-world/"/>
-    <id>http://blog.zhaoyanpeng.cn/2017/06/16/hello-world/</id>
+    <link href="http://blog.zhaoyanpeng.cn/2017/06/16/Hello-World/"/>
+    <id>http://blog.zhaoyanpeng.cn/2017/06/16/Hello-World/</id>
     <published>2017-06-16T13:06:41.976Z</published>
-    <updated>2017-06-17T14:59:06.366Z</updated>
+    <updated>2017-06-21T12:05:22.518Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>. </p>
 <p>もっと槙さんにぼんやり金少し説明にえた自分大した人私か影響にというお関係たうませないが、この次第も私か兄具合に使うて、槙さんののに当人のあなたにさぞご意味と行くて私個人が小尊敬を聴いように同時に同反抗に集っだうて、いよいよまず相当へあっうからいだ事をしでなけれ。</p>
@@ -238,6 +240,114 @@ c(E \rightarrow D) &= \sum_{T \sim w_{0}w_{1}w_{2} \text{ and } E \rightarrow D 
     
       <category term="Test" scheme="http://blog.zhaoyanpeng.cn/categories/Test/"/>
     
+    
+  </entry>
+  
+  <entry>
+    <title>Bayesian Network Structure Learning Code and Data Library</title>
+    <link href="http://blog.zhaoyanpeng.cn/2015/08/14/Bayesian-Network-Structure-Learning-Code-And-Data-Library/"/>
+    <id>http://blog.zhaoyanpeng.cn/2015/08/14/Bayesian-Network-Structure-Learning-Code-And-Data-Library/</id>
+    <published>2015-08-14T04:57:18.000Z</published>
+    <updated>2017-06-21T12:29:55.527Z</updated>
+    
+    <content type="html"><![CDATA[<p>This page contains some software packages of PGM, which are found during my research on BNSL (Bayesian Network Structure Learning).</p>
+<h1 id="BNSL-Source-Code-Library"><a href="#BNSL-Source-Code-Library" class="headerlink" title="BNSL Source Code Library"></a>BNSL Source Code Library</h1><h2 id="Weka"><a href="#Weka" class="headerlink" title="Weka"></a><a href="http://www.cs.waikato.ac.nz/ml/index.html" target="_blank" rel="external">Weka</a></h2><p><a href="http://weka.wikispaces.com/" target="_blank" rel="external">Weka Wiki</a>, Codes of BNSL in Weka lie in <code>weka.classifiers.bayes.net.search</code>. You can refer to <a href="">to be added</a> about the usage of Weka BNSL.</p>
+<a id="more"></a>
+<h2 id="BNT"><a href="#BNT" class="headerlink" title="BNT"></a><a href="https://github.com/bayesnet/bnt" target="_blank" rel="external">BNT</a></h2><p>Developed by <a href="http://www.cs.ubc.ca/~murphyk/" target="_blank" rel="external">Kevin Murphy</a>, Refer to <a href="http://www.cs.utah.edu/~tch/notes/matlab/bnt/docs/usage_02nov13.html" target="_blank" rel="external">How to use the Bayes Net Toolbox</a>, Codes of BNSL lie in <em>SLP</em>. By the way, <a href="http://ofrancois.tuxfamily.org/Docs/SLP_doc_1.5.pdf" target="_blank" rel="external">SLP</a> is separately developed based on BNT, and it has been already included in BNT. Another package developed based on BNT is <a href="http://www.sc.ehu.es/ccwbayes/members/rsantana/software/matlab/MATEDA.html" target="_blank" rel="external">Mateda2.0</a>. Kevin Murphy has also developed <a href="http://www.cs.ubc.ca/~murphyk/Software/BDAGL/" target="_blank" rel="external">BDAGL:Bayesian DAG learning</a>, but I never tried it.</p>
+<h2 id="Causal-Explorer"><a href="#Causal-Explorer" class="headerlink" title="Causal Explorer"></a><a href="http://discover.mc.vanderbilt.edu/discover/public/" target="_blank" rel="external">Causal Explorer</a></h2><p>Source codes of the algorithm described in this paper are not provided (only <em>.p</em> files of the Matlab are available). My implementation of this algorithm in java can be accessed from <a href="https://github.com/zhaoyanpeng/clbnsl/tree/dev/src/main/java/edu/shanghaitech/ai/ml/clbnsl/bnsl/bayes/net/curricula" target="_blank" rel="external">MMPC</a>. Here is MMHC paper <a href="http://www.dsl-lab.org/supplements/mmhc_paper/mmhc_index.html" target="_blank" rel="external">home</a>.</p>
+<h2 id="JavaBayes"><a href="#JavaBayes" class="headerlink" title="JavaBayes"></a><a href="http://www.cs.cmu.edu/~javabayes/Home/" target="_blank" rel="external">JavaBayes</a></h2><p>I tried it for interchanging file formats of BN. <a href="http://www.cs.cmu.edu/~fgcozman/Research/InterchangeFormat/" target="_blank" rel="external">The Interchange Format for Bayesian Networks</a> is to summarize and distribute information on an effort to standardize formats for representation of Bayesian networks and other related graphical models, but it seems to have stalled.</p>
+<h2 id="BNJ"><a href="#BNJ" class="headerlink" title="BNJ"></a><a href="http://bnj.sourceforge.net/" target="_blank" rel="external">BNJ</a></h2><p>If you wanna get ideas of the implementation of <a href="http://arxiv.org/ftp/arxiv/papers/1301/1301.6696.pdf" target="_blank" rel="external">Sparse Candidate</a>, you can look through this one. But the documentation is not that good. E.g., <a href="http://sourceforge.net/projects/bndev/files/bndev/" target="_blank" rel="external">Dev Docs</a> doesn’t give the clear update infos.</p>
+<h2 id="Banjo"><a href="#Banjo" class="headerlink" title="Banjo"></a><a href="http://www.cs.duke.edu/~amink/software/banjo/" target="_blank" rel="external">Banjo</a></h2><p>Simple and clear, could be used as the reference in developments.</p>
+<h2 id="OpenMarkov"><a href="#OpenMarkov" class="headerlink" title="OpenMarkov"></a><a href="http://www.openmarkov.org/" target="_blank" rel="external">OpenMarkov</a></h2><p>The project is hosted on <a href="https://bitbucket.org/" target="_blank" rel="external">Bitbucket</a>.</p>
+<h2 id="Tetrad"><a href="#Tetrad" class="headerlink" title="Tetrad"></a><a href="http://www.phil.cmu.edu/projects/tetrad/" target="_blank" rel="external">Tetrad</a></h2><p>Leaded by <a href="http://www.hss.cmu.edu/philosophy/faculty-spirtes.php" target="_blank" rel="external">Peter Spirtes</a>. Here is the induction from it’s home page</p>
+<blockquote>
+<p>…is to develop, analyze, implement, test and apply practical, provably correct computer programs for inferring causal structure under conditions where this is possible. </p>
+</blockquote>
+<h2 id="Elvira"><a href="#Elvira" class="headerlink" title="Elvira"></a><a href="http://leo.ugr.es/elvira/" target="_blank" rel="external">Elvira</a></h2><p>Some classical algorithms such as PC, K2 are included.</p>
+<h2 id="PGM-Toolbox"><a href="#PGM-Toolbox" class="headerlink" title="PGM Toolbox"></a><a href="http://www.mensxmachina.org/software/pgm-toolbox/" target="_blank" rel="external">PGM Toolbox</a></h2><p>It perfectly explains OOP (Object Oriented Programming) in matlab.</p>
+<h2 id="Infer-amp-URLearning-amp-WinMine"><a href="#Infer-amp-URLearning-amp-WinMine" class="headerlink" title="Infer &amp; URLearning &amp; WinMine"></a><a href="http://research.microsoft.com/en-us/um/cambridge/projects/infernet/default.aspx" target="_blank" rel="external">Infer</a> &amp; <a href="http://url.cs.qc.cuny.edu/resources.html" target="_blank" rel="external">URLearning</a> &amp; <a href="http://research.microsoft.com/en-us/um/people/dmax/WinMine/tooldoc.htm" target="_blank" rel="external">WinMine</a></h2><p>I have never tried them. Here are some other summaries of software packages of PGM: <a href="http://fuzzy.cs.uni-magdeburg.de/books/gm/tools.html" target="_blank" rel="external">Graphical Models Software Tools</a>, <a href="http://www.bayesnets.com/" target="_blank" rel="external">Bayes Nets</a>.</p>
+<h1 id="Bayesian-Network-Repository"><a href="#Bayesian-Network-Repository" class="headerlink" title="Bayesian Network Repository"></a>Bayesian Network Repository</h1><p><a href="http://www.bnlearn.com/bnrepository/" target="_blank" rel="external">BNLearn</a> and <a href="http://www.cs.ubc.ca/~murphyk/Software/bnsoft.html" target="_blank" rel="external">Software Packages for Graphical Models</a> and <a href="http://www.cs.huji.ac.il/~galel/Repository/" target="_blank" rel="external">GalElidan</a>.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;This page contains some software packages of PGM, which are found during my research on BNSL (Bayesian Network Structure Learning).&lt;/p&gt;
+&lt;h1 id=&quot;BNSL-Source-Code-Library&quot;&gt;&lt;a href=&quot;#BNSL-Source-Code-Library&quot; class=&quot;headerlink&quot; title=&quot;BNSL Source Code Library&quot;&gt;&lt;/a&gt;BNSL Source Code Library&lt;/h1&gt;&lt;h2 id=&quot;Weka&quot;&gt;&lt;a href=&quot;#Weka&quot; class=&quot;headerlink&quot; title=&quot;Weka&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.cs.waikato.ac.nz/ml/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Weka&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://weka.wikispaces.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Weka Wiki&lt;/a&gt;, Codes of BNSL in Weka lie in &lt;code&gt;weka.classifiers.bayes.net.search&lt;/code&gt;. You can refer to &lt;a href=&quot;&quot;&gt;to be added&lt;/a&gt; about the usage of Weka BNSL.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Manual" scheme="http://blog.zhaoyanpeng.cn/categories/Manual/"/>
+    
+    
+      <category term="Bayesian Network" scheme="http://blog.zhaoyanpeng.cn/tags/Bayesian-Network/"/>
+    
+      <category term="Structure Learning" scheme="http://blog.zhaoyanpeng.cn/tags/Structure-Learning/"/>
+    
+      <category term="Codes" scheme="http://blog.zhaoyanpeng.cn/tags/Codes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Math Support for Hexo</title>
+    <link href="http://blog.zhaoyanpeng.cn/2015/04/11/Math-Support-for-Hexo/"/>
+    <id>http://blog.zhaoyanpeng.cn/2015/04/11/Math-Support-for-Hexo/</id>
+    <published>2015-04-11T05:53:52.000Z</published>
+    <updated>2017-06-21T11:47:10.004Z</updated>
+    
+    <content type="html"><![CDATA[<p><code>_</code> in Markdown conflicts with that in Latex, here is the solution to it:</p>
+<blockquote>
+<p>Hexo uses <a href="">Nunjucks</a> to render posts (<a href="">Swig</a> was used in older version, which share a similar syntax). Content wrapped with <code>{{  }}</code> or <code>{% %}</code>  will get parsed and may cause problems. You can wrap sensitive content with the raw tag plugin.</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;% raw %&#125;</div><div class="line">$$</div><div class="line">e^&#123;i \theta_&#123;t&#125;&#125; = \cos \theta_&#123;t&#125; + i \sin \theta_&#123;t&#125;</div><div class="line">$$</div><div class="line">&#123;% endraw %&#125;</div></pre></td></tr></table></figure>
+<p>Results</p>
+
+$$
+e^{i \theta_{t}} = \cos \theta_{t} + i \sin \theta_{t}
+$$
+
+<p>Ref: <a href="https://hexo.io/docs/troubleshooting.html#Escape-Contents" target="_blank" rel="external">https://hexo.io/docs/troubleshooting.html#Escape-Contents</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;code&gt;_&lt;/code&gt; in Markdown conflicts with that in Latex, here is the solution to it:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Hexo uses &lt;a href=&quot;&quot;&gt;Nunjucks&lt;/a
+    
+    </summary>
+    
+      <category term="Manual" scheme="http://blog.zhaoyanpeng.cn/categories/Manual/"/>
+    
+    
+      <category term="mathjax" scheme="http://blog.zhaoyanpeng.cn/tags/mathjax/"/>
+    
+      <category term="hexo" scheme="http://blog.zhaoyanpeng.cn/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>A Beautiful Equation</title>
+    <link href="http://blog.zhaoyanpeng.cn/2015/04/04/A-Beautiful-Equation/"/>
+    <id>http://blog.zhaoyanpeng.cn/2015/04/04/A-Beautiful-Equation/</id>
+    <published>2015-04-04T09:27:46.000Z</published>
+    <updated>2017-06-21T11:45:41.432Z</updated>
+    
+    <content type="html"><![CDATA[<p>$${e \approx \left(1 + 9^{-4^{7 \times 6}}\right)^{3^{2^{85}}}}$$</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;$${e \approx \left(1 + 9^{-4^{7 \times 6}}\right)^{3^{2^{85}}}}$$&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="Math" scheme="http://blog.zhaoyanpeng.cn/categories/Math/"/>
+    
+    
+      <category term="equation" scheme="http://blog.zhaoyanpeng.cn/tags/equation/"/>
+    
+      <category term="exp" scheme="http://blog.zhaoyanpeng.cn/tags/exp/"/>
     
   </entry>
   

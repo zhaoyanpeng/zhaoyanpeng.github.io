@@ -89,7 +89,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Yann, Memo" />
+  <meta name="keywords" content="CYK,Toy Grammars," />
 
 
 
@@ -107,16 +107,17 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.  もっと槙">
+<meta name="description" content="Grammar Rules$S$ or $R$ is used as the root node in the following discussion, so $O(S)=O(R)=1$.    Binary Rules (w) Unary Rules (w) Lexicons (w) Possible Chain Rules     D-&amp;gt;BC (2)E-&amp;gt;BC (3)F-&amp;gt;">
+<meta name="keywords" content="CYK,Toy Grammars">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://blog.zhaoyanpeng.cn/2017/06/16/Hello-World/index.html">
+<meta property="og:title" content="CYK with Unary Rules">
+<meta property="og:url" content="http://blog.zhaoyanpeng.cn/2018/12/08/CYK-with-Unary-Rules/index.html">
 <meta property="og:site_name" content="Yann&#39;s Pages">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.  もっと槙">
-<meta property="og:updated_time" content="2017-06-21T12:05:22.518Z">
+<meta property="og:description" content="Grammar Rules$S$ or $R$ is used as the root node in the following discussion, so $O(S)=O(R)=1$.    Binary Rules (w) Unary Rules (w) Lexicons (w) Possible Chain Rules     D-&amp;gt;BC (2)E-&amp;gt;BC (3)F-&amp;gt;">
+<meta property="og:updated_time" content="2017-06-21T12:30:18.292Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.  もっと槙">
+<meta name="twitter:title" content="CYK with Unary Rules">
+<meta name="twitter:description" content="Grammar Rules$S$ or $R$ is used as the root node in the following discussion, so $O(S)=O(R)=1$.    Binary Rules (w) Unary Rules (w) Lexicons (w) Possible Chain Rules     D-&amp;gt;BC (2)E-&amp;gt;BC (3)F-&amp;gt;">
 
 
 
@@ -144,13 +145,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.zhaoyanpeng.cn/2017/06/16/Hello-World/"/>
+  <link rel="canonical" href="http://blog.zhaoyanpeng.cn/2018/12/08/CYK-with-Unary-Rules/"/>
 
 
 
 
 
-  <title>Hello World | Yann's Pages</title>
+  <title>CYK with Unary Rules | Yann's Pages</title>
   
 
 
@@ -318,7 +319,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://blog.zhaoyanpeng.cn/2017/06/16/Hello-World/">
+    <link itemprop="mainEntityOfPage" href="http://blog.zhaoyanpeng.cn/2018/12/08/CYK-with-Unary-Rules/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yanpeng Zhao">
@@ -335,7 +336,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">CYK with Unary Rules</h1>
         
 
         <div class="post-meta">
@@ -347,8 +348,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-16T21:06:41+08:00">
-                2017-06-16
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-08T09:10:50+08:00">
+                2018-12-08
               </time>
             
 
@@ -370,8 +371,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Test/" itemprop="url" rel="index">
-                    <span itemprop="name">Test</span>
+                  <a href="/categories/Parsing/" itemprop="url" rel="index">
+                    <span itemprop="name">Parsing</span>
                   </a>
                 </span>
 
@@ -388,9 +389,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/06/16/Hello-World/#comments" itemprop="discussionUrl">
+                <a href="/2018/12/08/CYK-with-Unary-Rules/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/06/16/Hello-World/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/12/08/CYK-with-Unary-Rules/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -398,7 +399,7 @@
 
           
           
-             <span id="/2017/06/16/Hello-World/" class="leancloud_visitors" data-flag-title="Hello World">
+             <span id="/2018/12/08/CYK-with-Unary-Rules/" class="leancloud_visitors" data-flag-title="CYK with Unary Rules">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -426,18 +427,159 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>. </p>
-<p>もっと槙さんにぼんやり金少し説明にえた自分大した人私か影響にというお関係たうませないが、この次第も私か兄具合に使うて、槙さんののに当人のあなたにさぞご意味と行くて私個人が小尊敬を聴いように同時に同反抗に集っだうて、いよいよまず相当へあっうからいだ事をしでなけれ。</p>
+        <h1 id="Grammar-Rules"><a href="#Grammar-Rules" class="headerlink" title="Grammar Rules"></a>Grammar Rules</h1><p>$S$ or $R$ is used as the root node in the following discussion, so $O(S)=O(R)=1$.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Binary Rules (w)</th>
+<th style="text-align:center">Unary Rules (w)</th>
+<th style="text-align:center">Lexicons (w)</th>
+<th style="text-align:center">Possible Chain Rules</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>D-&gt;BC</code> (2)<br><code>E-&gt;BC</code> (3)<br><code>F-&gt;BC</code> (4)<br><code>S-&gt;AD</code> (2)<br><code>S-&gt;AE</code> (3)<br><code>S-&gt;AF</code> (3)<br><code>S-&gt;AG</code> (2)</td>
+<td style="text-align:center"><code>F-&gt;E</code> (2)<br><code>E-&gt;D</code> (3)<br><code>G-&gt;E</code> (3)</td>
+<td style="text-align:center"><code>A-&gt;w0</code> (2)<br><code>B-&gt;w1</code> (2)<br><code>C-&gt;w2</code> (1)</td>
+<td style="text-align:center"><code>null</code><br><code>F-&gt;E</code><br><code>G-&gt;E</code><br><code>E-&gt;D</code><br><code>F-&gt;E-&gt;D</code><br><code>G-&gt;E-&gt;D</code></td>
+</tr>
+</tbody>
+</table>
 <a id="more"></a>
-<p>就竟在，是我童示讓利分和異種百路關母信過明驗有個歷洋中前合著區亮風值新底車有正結，進快保的行戰從：弟除文辦條國備當來際年每小腳識世可的的外的廣下歌洲保輪市果底天影；全氣具些回童但倒影發狀在示，數上學大法很，如要我……月品大供這起服滿老？應學傳者國：山式排只不之然清同關；細車是！停屋常間又，資畫領生，相們制在？公別的人寫教資夠。資再我我！只臉夫藝量不路政吃息緊回力之；兒足灣電空時局我怎初安。意今一子區首者微陸現際安除發連由子由而走學體區園我車當會，經時取頭，嚴了新科同？很夫營動通打，出和導一樂，查旅他。坐是收外子發物北看蘭戰坐車身做可來。道就學務。</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+<p>When you draw out all the possible parse trees spanning the sentence <code>w0,w1,w2</code>, you could find the only difference among these parse trees is about the choices of chain rules. We only consider chain unary rules of length less than or equal to 2 in weighted context free grammar, and define 3 levels for inside scores and outside scores of nonterminals involved in such chains. Level index that ranges from 0 to 2 increases from the bottom up (top down) for inside scores (outside scores). Each level <code>L</code> contains nonterminals that are exactly the upmost (bottommost) ones in the chain unary rules of length <code>L</code> for inside scores (outside scores).</p>
+<h1 id="Inside-Scores-amp-Outside-Scores"><a href="#Inside-Scores-amp-Outside-Scores" class="headerlink" title="Inside Scores &amp; Outside Scores"></a>Inside Scores &amp; Outside Scores</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">Levels</th>
+<th style="text-align:center">Inside Scores (w)</th>
+<th style="text-align:center">Outside Scores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center"><code>I0(D) = w(D-&gt;BC)I(B)I(C)=4</code><br><code>I0(E) = w(E-&gt;BC)I(B)I(C)=6</code><br><code>I0(F) = w(F-&gt;BC)I(B)I(C)=8</code></td>
+<td style="text-align:center"><code>O0(D) = I(A)w(S-&gt;AD)O(S)=4</code><br><code>O0(E) = I(A)w(S-&gt;AE)O(S)=6</code><br><code>O0(F) = I(A)w(S-&gt;AF)O(S)=6</code><br><code>O0(G) = I(A)w(S-&gt;AG)O(S)=4</code></td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center"><code>I1(E) = w(E-&gt;D)I0(D)=12</code><br><code>I1(F) = w(F-&gt;E)I0(E)=12</code><br><code>I1(G) = w(G-&gt;E)I0(E)=18</code></td>
+<td style="text-align:center"><code>O1(D) = w(E-&gt;D)O0(E)=18</code><br><code>O1(E) = w(F-&gt;E)O0(F) + w(G-&gt;E)O0(G)=24</code></td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center"><code>I2(F) = w(F-&gt;E)I1(E)=24</code><br><code>I2(G) = w(G-&gt;E)I1(E)=36</code></td>
+<td style="text-align:center"><code>O2(D) = w(E-&gt;D)O1(E)=72</code></td>
+</tr>
+</tbody>
+</table>
+<p>From inside scores in the chain unary rules in the above table, we can compute the score of the sentence $w_{0}w_{1}w_{2}$ as</p>
+
+\begin{align}
+I(S) = I(A)\sum_{X \in \mathbf{X}} w(S \rightarrow AX)\sum_{i = 0, 1, 2} I_{i}(X),
+\end{align}
+
+<p>where $S$ is the root node, $\mathbf{X}$ is the nonterminal set, $ w(S \rightarrow AX) = I_{i}(X) = 0 $ if such rules or inside scores do not exist. And</p>
+
+\begin{align*}
+I(S) &= 2 \cdot ((4 \times 2 + 6 \times 3 + 8 \times 3) \\
+&+ (12 \times 3 + 12 \times 3 + 18 \times 2) + (24 \times 3 + 36 \times 2)) \\
+&= ((16 + 36 + 46) + (72 + 72 + 72) + (144 + 144))
+\end{align*}
+
+<h2 id="Additional-Grammar-Rules"><a href="#Additional-Grammar-Rules" class="headerlink" title="Additional Grammar Rules"></a>Additional Grammar Rules</h2><p>We introduce a constant M to represent the weight of the partial parse trees that dominate $ w_{2}w_{3} $ and replace $S$ with $J, K, L$. Also we add the additional grammar rules presented in the following table. The chain unary rules starting with $R$ are not included in possible chain rules.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Binary Rules (w)</th>
+<th style="text-align:center">Unary Rules (w)</th>
+<th style="text-align:center">Lexicons (w)</th>
+<th style="text-align:center">Possible Chain Rules</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>J-&gt;AM</code> (2)<br> <code>K-&gt;AM</code> (1)<br> <code>L-&gt;AM</code> (3)</td>
+<td style="text-align:center"><code>K-&gt;J</code> (2)<br><code>L-&gt;K</code> (3)<br><code>R-&gt;J</code> (3)<br> <code>R-&gt;K</code> (2)<br> <code>R-&gt;L</code> (1)</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><code>null</code><br><code>K-&gt;J</code><br><code>L-&gt;K</code><br><code>L-&gt;K-&gt;J</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Levels</th>
+<th style="text-align:center">Inside Scores (w)</th>
+<th style="text-align:center">Outside Scores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center"><code>I0(J) = w(J-&gt;AM)I(A)I(M)=4M</code><br><code>I0(K) = w(K-&gt;AM)I(A)I(M)=2M</code><br><code>I0(L) = w(L-&gt;AM)I(A)I(M)=6M</code></td>
+<td style="text-align:center"><code>O0(J) = w(R-&gt;J)O(R)=3</code><br><code>O0(K) = w(R-&gt;K)O(R)=2</code><br><code>O0(L) = w(R-&gt;L)O(R)=1</code></td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center"><code>I1(K) = w(K-&gt;J)I0(J)=8M</code><br><code>I1(L) = w(L-&gt;K)I0(K)=6M</code></td>
+<td style="text-align:center"><code>O1(J) = w(K-&gt;J)O0(K)=4</code><br><code>O1(K) = w(L-&gt;K)O0(L)=3</code></td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center"><code>I2(L) = w(L-&gt;K)I1(K)=24M</code></td>
+<td style="text-align:center"><code>O2(J) = w(K-&gt;J)O1(K)=6</code></td>
+</tr>
+</tbody>
+</table>
+
+\begin{align*}
+I(R) &= ((3 \times 4M + 2 \times 2M + 1 \times 6M) + (2 \times 8M + 1 \times 6M) + (1 \times 24M)) \\
+&= ((12M + 4M + 6M) + (16M + 6M) + (24M))
+\end{align*}
+
+<h2 id="Counts-of-Binary-Rule-c-S-rightarrow-AX"><a href="#Counts-of-Binary-Rule-c-S-rightarrow-AX" class="headerlink" title="Counts of Binary Rule $c(S \rightarrow AX)$"></a>Counts of Binary Rule $c(S \rightarrow AX)$</h2><p>For any nonterminal $X$, we need to find all its occurances in three levels. When $X = D$,</p>
+
+\begin{align*}
+c(S \rightarrow AD) &= I(A) O(S) w(S \rightarrow AD) I(D) \\
+&= I(A) w(S \rightarrow AD) \sum_{j = 0, 1, 2}O_{j}(S)  \sum_{i = 0, 1, 2} I_{i}(D) \\
+\end{align*}
+
+
+\begin{align*}
+c(J \rightarrow AM) &= w(R \rightarrow J)w(J \rightarrow AM)w(A \rightarrow w_{1})M \\
+&+  w(R \rightarrow K)w(K \rightarrow J)w(J \rightarrow AM)w(A \rightarrow w_{1})M \\
+&+ w(R \rightarrow L)w(L \rightarrow K)w(K \rightarrow J)w(J \rightarrow AM)w(A \rightarrow w_{1})M \\
+&= 12M + 16M + 24M = 52M \\
+&= \color{red}{ I(A)w(J \rightarrow AM)O(J)M} \\
+&= \color{red}{ I(A)w(J \rightarrow AM)\sum_{i = 0,1,2}O_{i}(J)M} \\
+&= 2 \times 2 \times (3 + 4 + 6)M = 52M
+\end{align*}
+
+<h2 id="Counts-of-Unary-Rule-c-X-rightarrow-Y"><a href="#Counts-of-Unary-Rule-c-X-rightarrow-Y" class="headerlink" title="Counts of Unary Rule $c(X \rightarrow Y)$"></a>Counts of Unary Rule $c(X \rightarrow Y)$</h2>
+\begin{align*}
+c(X \rightarrow Y) &= \{c(X \rightarrow Y) | X \rightarrow Y \text{ is the chain rule of length 1}\} \\
+&+ \{\sum_{Z \in \mathbf{X}} c(X \rightarrow Y \rightarrow Z) + c(Z \rightarrow X \rightarrow Y) | X \rightarrow Y \text{ is involved in the chain rule of length 2}\} \\
+&= w(X \rightarrow Y)(O_{0}(X)I_{0}(Y) + O_{0}(X)I_{1}(Y) + O_{1}(X)I_{0}(D))
+\end{align*}
+
+<p>Let $X = E, Y = D$, we can verify the above formula.</p>
+<p>The score of all the parse trees containing the unary rule $E \rightarrow D$ is</p>
+
+\begin{align*}
+c(E \rightarrow D) &= \sum_{T \sim w_{0}w_{1}w_{2} \text{ and } E \rightarrow D \in T} w(T) \\
+&= w(A \rightarrow w_{0}) w(S \rightarrow AE) w(E \rightarrow D) w(D \rightarrow BC) w(B \rightarrow w_{1}) w(C \rightarrow w_{2}) \\
+&+ w(A \rightarrow w_{0}) w(S \rightarrow AE) w(F \rightarrow E) w(E \rightarrow D) w(D \rightarrow BC) w(B \rightarrow w_{1}) w(C \rightarrow w_{2}) \\
+&+ w(A \rightarrow w_{0}) w(S \rightarrow AE) w(G \rightarrow E) w(E \rightarrow D) w(D \rightarrow BC) w(B \rightarrow w_{1}) w(C \rightarrow w_{2}) \\
+&= 2 \times 3 \times 3 \times 2 \times 2 \times 1 \\
+&+ 2 \times 3 \times 2 \times 3 \times 2 \times 2 \times 1 \\
+&+ 2 \times 2 \times 3 \times 3 \times 2 \times 2 \times 1 \\
+&= 72 + 144 + 144 \\
+&= \color{red}{w(E \rightarrow D)(O_{0}(E)I_{0}(D) + O_{1}(E)I_{0}(D))} \\
+&= 3 \times (6 \times 4 + 24 \times 4) \\
+&= 72 + 288
+\end{align*}
 
       
     </div>
@@ -466,7 +608,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>Post link:</strong>
-      <a href="http://blog.zhaoyanpeng.cn/2017/06/16/Hello-World/" title="Hello World">http://blog.zhaoyanpeng.cn/2017/06/16/Hello-World/</a>
+      <a href="http://blog.zhaoyanpeng.cn/2018/12/08/CYK-with-Unary-Rules/" title="CYK with Unary Rules">http://blog.zhaoyanpeng.cn/2018/12/08/CYK-with-Unary-Rules/</a>
     </li>
     <li class="post-copyright-license">
       <strong>Copyright Notice: </strong>
@@ -480,6 +622,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/CYK/" rel="tag"># CYK</a>
+          
+            <a href="/tags/Toy-Grammars/" rel="tag"># Toy Grammars</a>
+          
+        </div>
+      
 
       
       
@@ -489,8 +639,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/08/14/Bayesian-Network-Structure-Learning-Code-And-Data-Library/" rel="next" title="Bayesian Network Structure Learning Code and Data Library">
-                <i class="fa fa-chevron-left"></i> Bayesian Network Structure Learning Code and Data Library
+              <a href="/2017/06/16/Hello-World/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
               </a>
             
           </div>
@@ -498,10 +648,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/12/08/CYK-with-Unary-Rules/" rel="prev" title="CYK with Unary Rules">
-                CYK with Unary Rules <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -661,7 +807,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Grammar-Rules"><span class="nav-number">1.</span> <span class="nav-text">Grammar Rules</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Inside-Scores-amp-Outside-Scores"><span class="nav-number">2.</span> <span class="nav-text">Inside Scores & Outside Scores</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Additional-Grammar-Rules"><span class="nav-number">2.1.</span> <span class="nav-text">Additional Grammar Rules</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Counts-of-Binary-Rule-c-S-rightarrow-AX"><span class="nav-number">2.2.</span> <span class="nav-text">Counts of Binary Rule $c(S \rightarrow AX)$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Counts-of-Unary-Rule-c-X-rightarrow-Y"><span class="nav-number">2.3.</span> <span class="nav-text">Counts of Unary Rule $c(X \rightarrow Y)$</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -806,9 +952,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://blog.zhaoyanpeng.cn/2017/06/16/Hello-World/';
-          this.page.identifier = '2017/06/16/Hello-World/';
-          this.page.title = 'Hello World';
+          this.page.url = 'http://blog.zhaoyanpeng.cn/2018/12/08/CYK-with-Unary-Rules/';
+          this.page.identifier = '2018/12/08/CYK-with-Unary-Rules/';
+          this.page.title = 'CYK with Unary Rules';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://oops-disqus.disqus.com/embed.js';
