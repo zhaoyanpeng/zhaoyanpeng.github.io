@@ -1685,7 +1685,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff63c2;
+  background: #8f50df;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2936,11 +2936,7 @@ a {
 .posts-expand .post-meta {
   text-align: center;
 }
-.posts-expand .post-meta {
-  color: #f27006;
-}
 .posts-expand .post-meta a {
-  color: #f27006;
   border-bottom: none;
 }
 .posts-expand .post-meta a:hover {
