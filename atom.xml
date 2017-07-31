@@ -215,9 +215,9 @@ c(E \rightarrow D) &= \sum_{T \sim w_{0}w_{1}w_{2} \text{ and } E \rightarrow D 
     <link href="http://blog.zhaoyanpeng.cn/2015/08/14/Bayesian-Network-Structure-Learning-Code-And-Data-Library/"/>
     <id>http://blog.zhaoyanpeng.cn/2015/08/14/Bayesian-Network-Structure-Learning-Code-And-Data-Library/</id>
     <published>2015-08-14T04:57:18.000Z</published>
-    <updated>2017-06-21T12:29:55.527Z</updated>
+    <updated>2017-07-31T07:53:05.480Z</updated>
     
-    <content type="html"><![CDATA[<p>This page contains some software packages of PGM, which are found during my research on BNSL (Bayesian Network Structure Learning).</p>
+    <content type="html"><![CDATA[<p>This page contains some software packages of PGM, which were found during my research on BNSL (Bayesian Network Structure Learning).</p>
 <h1 id="BNSL-Source-Code-Library"><a href="#BNSL-Source-Code-Library" class="headerlink" title="BNSL Source Code Library"></a>BNSL Source Code Library</h1><h2 id="Weka"><a href="#Weka" class="headerlink" title="Weka"></a><a href="http://www.cs.waikato.ac.nz/ml/index.html" target="_blank" rel="external">Weka</a></h2><p><a href="http://weka.wikispaces.com/" target="_blank" rel="external">Weka Wiki</a>, Codes of BNSL in Weka lie in <code>weka.classifiers.bayes.net.search</code>. You can refer to <a href="">to be added</a> about the usage of Weka BNSL.</p>
 <a id="more"></a>
 <h2 id="BNT"><a href="#BNT" class="headerlink" title="BNT"></a><a href="https://github.com/bayesnet/bnt" target="_blank" rel="external">BNT</a></h2><p>Developed by <a href="http://www.cs.ubc.ca/~murphyk/" target="_blank" rel="external">Kevin Murphy</a>, Refer to <a href="http://www.cs.utah.edu/~tch/notes/matlab/bnt/docs/usage_02nov13.html" target="_blank" rel="external">How to use the Bayes Net Toolbox</a>, Codes of BNSL lie in <em>SLP</em>. By the way, <a href="http://ofrancois.tuxfamily.org/Docs/SLP_doc_1.5.pdf" target="_blank" rel="external">SLP</a> is separately developed based on BNT, and it has been already included in BNT. Another package developed based on BNT is <a href="http://www.sc.ehu.es/ccwbayes/members/rsantana/software/matlab/MATEDA.html" target="_blank" rel="external">Mateda2.0</a>. Kevin Murphy has also developed <a href="http://www.cs.ubc.ca/~murphyk/Software/BDAGL/" target="_blank" rel="external">BDAGL:Bayesian DAG learning</a>, but I never tried it.</p>
@@ -238,7 +238,7 @@ c(E \rightarrow D) &= \sum_{T \sim w_{0}w_{1}w_{2} \text{ and } E \rightarrow D 
     
     <summary type="html">
     
-      &lt;p&gt;This page contains some software packages of PGM, which are found during my research on BNSL (Bayesian Network Structure Learning).&lt;/p&gt;
+      &lt;p&gt;This page contains some software packages of PGM, which were found during my research on BNSL (Bayesian Network Structure Learning).&lt;/p&gt;
 &lt;h1 id=&quot;BNSL-Source-Code-Library&quot;&gt;&lt;a href=&quot;#BNSL-Source-Code-Library&quot; class=&quot;headerlink&quot; title=&quot;BNSL Source Code Library&quot;&gt;&lt;/a&gt;BNSL Source Code Library&lt;/h1&gt;&lt;h2 id=&quot;Weka&quot;&gt;&lt;a href=&quot;#Weka&quot; class=&quot;headerlink&quot; title=&quot;Weka&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.cs.waikato.ac.nz/ml/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Weka&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://weka.wikispaces.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Weka Wiki&lt;/a&gt;, Codes of BNSL in Weka lie in &lt;code&gt;weka.classifiers.bayes.net.search&lt;/code&gt;. You can refer to &lt;a href=&quot;&quot;&gt;to be added&lt;/a&gt; about the usage of Weka BNSL.&lt;/p&gt;
     
     </summary>
