@@ -1685,7 +1685,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #47ffff;
+  background: #6e869e;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2959,18 +2959,18 @@ a {
   text-align: center;
 }
 .post-button .btn {
-  border: 2px solid #42b983;
+  border: 1px solid #bbb;
   text-decoration: none;
-  color: #42b983;
+  color: #bbb;
   background: #fff;
   border-radius: 8px;
   line-height: 2;
   padding: 0 10px;
 }
 .post-button .btn:hover {
-  border-color: #42b983;
+  border-color: #222;
   color: #fff;
-  background: #42b983;
+  background: #222;
 }
 .post-button a {
   margin: 0 !important;
