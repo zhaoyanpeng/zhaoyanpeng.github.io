@@ -4,9 +4,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://blog.zhaoyanpeng.cn/"/>
+  <link href="http://zhaoyanpeng.cn/"/>
   <updated>2017-06-21T12:30:18.292Z</updated>
-  <id>http://blog.zhaoyanpeng.cn/</id>
+  <id>http://zhaoyanpeng.cn/</id>
   
   <author>
     <name>Yanpeng Zhao</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>CYK with Unary Rules</title>
-    <link href="http://blog.zhaoyanpeng.cn/2018/12/08/CYK-with-Unary-Rules/"/>
-    <id>http://blog.zhaoyanpeng.cn/2018/12/08/CYK-with-Unary-Rules/</id>
+    <link href="http://zhaoyanpeng.cn/2018/12/08/CYK-with-Unary-Rules/"/>
+    <id>http://zhaoyanpeng.cn/2018/12/08/CYK-with-Unary-Rules/</id>
     <published>2018-12-08T01:10:50.000Z</published>
     <updated>2017-06-21T12:30:18.292Z</updated>
     
@@ -201,19 +201,19 @@ c(E \rightarrow D) &= \sum_{T \sim w_{0}w_{1}w_{2} \text{ and } E \rightarrow D 
     
     </summary>
     
-      <category term="Parsing" scheme="http://blog.zhaoyanpeng.cn/categories/Parsing/"/>
+      <category term="Parsing" scheme="http://zhaoyanpeng.cn/categories/Parsing/"/>
     
     
-      <category term="CYK" scheme="http://blog.zhaoyanpeng.cn/tags/CYK/"/>
+      <category term="CYK" scheme="http://zhaoyanpeng.cn/tags/CYK/"/>
     
-      <category term="Toy Grammars" scheme="http://blog.zhaoyanpeng.cn/tags/Toy-Grammars/"/>
+      <category term="Toy Grammars" scheme="http://zhaoyanpeng.cn/tags/Toy-Grammars/"/>
     
   </entry>
   
   <entry>
     <title></title>
-    <link href="http://blog.zhaoyanpeng.cn/2017/06/17/Index/"/>
-    <id>http://blog.zhaoyanpeng.cn/2017/06/17/Index/</id>
+    <link href="http://zhaoyanpeng.cn/2017/06/17/Index/"/>
+    <id>http://zhaoyanpeng.cn/2017/06/17/Index/</id>
     <published>2017-06-17T11:04:41.000Z</published>
     <updated>2017-10-14T10:33:43.032Z</updated>
     
@@ -274,8 +274,8 @@ Adviser: Kewei Tu</li>
   
   <entry>
     <title>Bayesian Network Structure Learning Code and Data Library</title>
-    <link href="http://blog.zhaoyanpeng.cn/2015/08/14/Bayesian-Network-Structure-Learning-Code-And-Data-Library/"/>
-    <id>http://blog.zhaoyanpeng.cn/2015/08/14/Bayesian-Network-Structure-Learning-Code-And-Data-Library/</id>
+    <link href="http://zhaoyanpeng.cn/2015/08/14/Bayesian-Network-Structure-Learning-Code-And-Data-Library/"/>
+    <id>http://zhaoyanpeng.cn/2015/08/14/Bayesian-Network-Structure-Learning-Code-And-Data-Library/</id>
     <published>2015-08-14T04:57:18.000Z</published>
     <updated>2017-07-31T07:53:05.480Z</updated>
     
@@ -305,21 +305,21 @@ Adviser: Kewei Tu</li>
     
     </summary>
     
-      <category term="Manual" scheme="http://blog.zhaoyanpeng.cn/categories/Manual/"/>
+      <category term="Manual" scheme="http://zhaoyanpeng.cn/categories/Manual/"/>
     
     
-      <category term="Bayesian Network" scheme="http://blog.zhaoyanpeng.cn/tags/Bayesian-Network/"/>
+      <category term="Bayesian Network" scheme="http://zhaoyanpeng.cn/tags/Bayesian-Network/"/>
     
-      <category term="Structure Learning" scheme="http://blog.zhaoyanpeng.cn/tags/Structure-Learning/"/>
+      <category term="Structure Learning" scheme="http://zhaoyanpeng.cn/tags/Structure-Learning/"/>
     
-      <category term="Codes" scheme="http://blog.zhaoyanpeng.cn/tags/Codes/"/>
+      <category term="Codes" scheme="http://zhaoyanpeng.cn/tags/Codes/"/>
     
   </entry>
   
   <entry>
     <title>Math Support for Hexo</title>
-    <link href="http://blog.zhaoyanpeng.cn/2015/04/11/Math-Support-for-Hexo/"/>
-    <id>http://blog.zhaoyanpeng.cn/2015/04/11/Math-Support-for-Hexo/</id>
+    <link href="http://zhaoyanpeng.cn/2015/04/11/Math-Support-for-Hexo/"/>
+    <id>http://zhaoyanpeng.cn/2015/04/11/Math-Support-for-Hexo/</id>
     <published>2015-04-11T05:53:52.000Z</published>
     <updated>2017-06-21T11:47:10.004Z</updated>
     
@@ -345,19 +345,19 @@ $$
     
     </summary>
     
-      <category term="Manual" scheme="http://blog.zhaoyanpeng.cn/categories/Manual/"/>
+      <category term="Manual" scheme="http://zhaoyanpeng.cn/categories/Manual/"/>
     
     
-      <category term="mathjax" scheme="http://blog.zhaoyanpeng.cn/tags/mathjax/"/>
+      <category term="mathjax" scheme="http://zhaoyanpeng.cn/tags/mathjax/"/>
     
-      <category term="hexo" scheme="http://blog.zhaoyanpeng.cn/tags/hexo/"/>
+      <category term="hexo" scheme="http://zhaoyanpeng.cn/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>A Beautiful Equation</title>
-    <link href="http://blog.zhaoyanpeng.cn/2015/04/04/A-Beautiful-Equation/"/>
-    <id>http://blog.zhaoyanpeng.cn/2015/04/04/A-Beautiful-Equation/</id>
+    <link href="http://zhaoyanpeng.cn/2015/04/04/A-Beautiful-Equation/"/>
+    <id>http://zhaoyanpeng.cn/2015/04/04/A-Beautiful-Equation/</id>
     <published>2015-04-04T09:27:46.000Z</published>
     <updated>2017-06-21T11:45:41.432Z</updated>
     
@@ -371,12 +371,12 @@ $$
     
     </summary>
     
-      <category term="Math" scheme="http://blog.zhaoyanpeng.cn/categories/Math/"/>
+      <category term="Math" scheme="http://zhaoyanpeng.cn/categories/Math/"/>
     
     
-      <category term="equation" scheme="http://blog.zhaoyanpeng.cn/tags/equation/"/>
+      <category term="equation" scheme="http://zhaoyanpeng.cn/tags/equation/"/>
     
-      <category term="exp" scheme="http://blog.zhaoyanpeng.cn/tags/exp/"/>
+      <category term="exp" scheme="http://zhaoyanpeng.cn/tags/exp/"/>
     
   </entry>
   
