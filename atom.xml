@@ -215,11 +215,11 @@ c(E \rightarrow D) &= \sum_{T \sim w_{0}w_{1}w_{2} \text{ and } E \rightarrow D 
     <link href="http://zhaoyanpeng.cn/2017/06/17/Index/"/>
     <id>http://zhaoyanpeng.cn/2017/06/17/Index/</id>
     <published>2017-06-17T11:04:41.000Z</published>
-    <updated>2017-10-16T15:05:41.563Z</updated>
+    <updated>2017-11-22T04:52:36.555Z</updated>
     
-    <content type="html"><![CDATA[<table class="oops-table"><tbody> <tr> <td style="text-align:left;width:40%;padding-left: 0;padding-bottom: 0;"> <img src="/images/yan.png" alt="Yanpeng Zhao (赵彦鹏)" width="100%" height="" ,=""></td> <td style="text-align:left; padding-left: 20px;"><h1 style="font-size:200%;margin: 0 0 10px 0">Yanpeng Zhao <span style="font-family:Baskerville; font-size:90%">(赵彦鹏)</span></h1><p style="font-size:120%;line-height: 1.2;margin: 0;padding: 0;"><b>M.Sc. </b> in <b>Computer Science</b> <br> <b>ShanghaiTech University</b><br><br><b>Email</b>: <tt>zhaoyp1#shanghaitech.edu.cn</tt><br><b>Office</b>: 1A 306, SIST Building<br><br>[<a href="#Publication">Publication</a>] [<a href="#Education">Education</a>] [<a href="#Experience">Experience</a>] [<a href="#Selected-Awards">Awards</a>] [<a href="/files/CV_YPZHAO.pdf">Resume</a>]</p></td> </tr><!-- <tr> <td class="oops-left">col 1 is</td> <td style="text-align:left">Sep 2011 - Jun 2015</td> </tr> --></tbody></table>
+    <content type="html"><![CDATA[<table class="oops-table"><tbody> <tr> <td style="text-align:left;width:40%;padding-left: 0;padding-bottom: 0;"> <img src="/images/yan.png" alt="Yanpeng Zhao (赵彦鹏)" width="100%" height="" ,=""></td> <td style="text-align:left; padding-left: 20px;"><h1 style="font-size:200%;margin: 0 0 10px 0">Yanpeng Zhao <span style="font-family:Baskerville; font-size:90%">(赵彦鹏)</span></h1><p style="font-size:120%;line-height: 1.2;margin: 0;padding: 0;"><b>M.Sc. </b> in <b>Computer Science</b> <br> <b>ShanghaiTech University</b><br><br><b>Email</b>: <tt>zhaoyp1#shanghaitech$\cdot$edu$\cdot$cn</tt><br><b>Office</b>: 1A 306, SIST Building, ShanghaiTech Univ.<br><br>[<a href="#Publication">Publication</a>] [<a href="#Education">Education</a>] [<a href="#Experience">Experience</a>] [<a href="#Selected-Awards">Awards</a>] [<a href="/files/CV_YPZHAO.pdf">Resume</a>]</p></td> </tr><!-- <tr> <td class="oops-left">col 1 is</td> <td style="text-align:left">Sep 2011 - Jun 2015</td> </tr> --></tbody></table>
 
-<p style="font-family: 'Times New Roman';line-height: 1.5;">Hi! I am a third-year M.Sc. student in the <a href="http://sist.shanghaitech.edu.cn/" target="_blank" rel="external">School of Information Science and Technology</a> at <a href="http://shanghaitech.edu.cn/" target="_blank" rel="external">ShanghaiTech University</a>, under the supervision of Prof. <a href="http://sist.shanghaitech.edu.cn/faculty/tukw/" target="_blank" rel="external">Kewei Tu</a>.<br>My current work focuses on constituency parsing with latent variables, which aims to learn the better parse<br>tree of the sentence while obtaining fine-grained grammars.<br><b>I am applying for Ph.D for fall 2018. Please contact me if you are interested in my background and experience. Further discussions are always welcome.</b> </p>
+<p style="font-family: 'Times New Roman';line-height: 1.5;">Hi! I am a third-year M.Sc. student in the <a href="http://sist.shanghaitech.edu.cn/" target="_blank" rel="external">School of Information Science and Technology</a> at <a href="http://shanghaitech.edu.cn/" target="_blank" rel="external">ShanghaiTech University</a>, under the supervision of Prof. <a href="http://sist.shanghaitech.edu.cn/faculty/tukw/" target="_blank" rel="external">Kewei Tu</a>.<br>My current work focuses on constituency parsing with latent variables, aiming to learn a better parse<br>tree given the sentence and obtain compact grammars.<br><b>I am applying for Ph.D for fall 2018. Please contact me if you are interested in my background and experience. Further discussions are always welcome.</b> </p>
 
 <h2 id="Publications"><a href="#Publications" class="headerlink" title="Publications"></a>Publications</h2><p style="margin-top: 0;margin-bottom: 5px;"><strong><em>Journal Papers</em></strong></p>
 
@@ -229,28 +229,34 @@ c(E \rightarrow D) &= \sum_{T \sim w_{0}w_{1}w_{2} \text{ and } E \rightarrow D 
 <p style="margin-top: 0;margin-bottom: 5px;"><strong><em>Conference Papers</em></strong></p>
 
 <ul>
-<li><em><a href="https://arxiv.org/pdf/1708.02071.pdf" target="_blank" rel="external">Structured Attentions for Visual Question Answering</a></em><br>Chen Zhu, <strong>Yanpeng Zhao</strong>, Shuaiyi Huang, Kewei Tu, and Yi Ma.<br>ICCV 2017 (poster). [<a href="https://arxiv.org/pdf/1708.02071.pdf" target="_blank" rel="external">paper</a>].</li>
+<li><em><a href="">Language Style Transfer from Non-Parallel Text with Arbitrary Styles</a></em><br><strong>Yanpeng Zhao</strong>, Victoria W. Bi, Deng Cai, Xiaojiang Liu, Kewei Tu, Shuming Shi.<br>Submitted to ICLR 2018.</li>
+<li><em><a href="https://arxiv.org/pdf/1708.02071.pdf" target="_blank" rel="external">Structured Attentions for Visual Question Answering</a></em><br>Chen Zhu, <strong>Yanpeng Zhao</strong>, Shuaiyi Huang, Kewei Tu, and Yi Ma.<br>ICCV 2017 (poster). [<a href="https://arxiv.org/pdf/1708.02071.pdf" target="_blank" rel="external">paper</a>], [<a href="https://github.com/zhuchen03/vqa-sva" target="_blank" rel="external">code</a>].</li>
 <li><em><a href="http://proceedings.mlr.press/v57/zhao16.pdf" target="_blank" rel="external">Sequence Prediction Using Neural Network Classifiers</a></em><br><strong>Yanpeng Zhao</strong>, Shanbo Chu, Yang Zhou, and Kewei Tu.<br>ICGI 2016 (workshop track). [<a href="http://proceedings.mlr.press/v57/zhao16.pdf" target="_blank" rel="external">paper</a>], [<a href="http://spice.lif.univ-mrs.fr/slides/slides_tobewhat.pdf" target="_blank" rel="external">slides</a>].</li>
 <li><em><a href="http://proceedings.mlr.press/v45/Zhao15a.pdf" target="_blank" rel="external">Curriculum Learning of Bayesian Network Structures</a></em><br><strong>Yanpeng Zhao</strong>, Yetian Chen, Kewei Tu, and Jin Tian.<br>ACML 2015 (oral). [<a href="http://proceedings.mlr.press/v45/Zhao15a.pdf" target="_blank" rel="external">paper</a>], [<a href="https://github.com/zhaoyanpeng/clbnsl" target="_blank" rel="external">code</a>], [<a href="http://sist.shanghaitech.edu.cn/faculty/tukw/acml15-poster.pdf" target="_blank" rel="external">poster</a>].</li>
 </ul>
 <h2 id="Experience"><a href="#Experience" class="headerlink" title="Experience"></a>Experience</h2><ul>
-<li>Research intern at <a href="http://ai.tencent.com/ailab/index.html" target="_blank" rel="external">Tencent AI Lab</a>, Jun 2017 - present</li>
-<li>Teaching Assistant for CS100 (Programming Languages and Data Structures) and CS110 (Computer Architecture I), SIST, ShanghaiTech University, Sep 2015 - Jun 2016</li>
+<li><a href="http://ai.tencent.com/ailab/index.html" target="_blank" rel="external">Tencent AI Lab</a>, Shenzhen, China, Jun 2017 - Oct 2017<br>Research Intern with Dr. Victoria W. Bi, Dr. Xiaojiang Liu, and Dr. Shuming Shi</li>
+<li><a href="http://sist.shanghaitech.edu.cn" target="_blank" rel="external">SIST</a>, ShanghaiTech University, Shanghai, China, Sep 2015 - Jun 2016<br>Teaching Assistant for CS100 (Programming Languages and Data Structures) and CS110 (Computer Architecture I)</li>
 </ul>
 <h2 id="Education"><a href="#Education" class="headerlink" title="Education"></a>Education</h2><ul>
 <li><em>M.Sc., Computer Science.</em>&nbsp;Sep 2015 - Present<br>ShanghaiTech University, Shanghai, China<br>Adviser: <a href="http://sist.shanghaitech.edu.cn/faculty/tukw/" target="_blank" rel="external">Kewei Tu</a></li>
 <li><em>B.E., Software Engineering.</em>&nbsp;Sep 2011 - Jun 2015<br>Wuhan University of Technology, Wuhan, China<br>Thesis: Curriculum Learning of Bayesian Network Structures</li>
 </ul>
 <h2 id="Selected-Awards"><a href="#Selected-Awards" class="headerlink" title="Selected Awards"></a>Selected Awards</h2><ul>
-<li>Outstanding Student, ShanghaiTech University, 2016</li>
+<li>National Scholarships for Graduate Students (Awarded to top 5% students), 2017<!-- + Excellent Student, ShanghaiTech University (Awarded to top 15% students), 2016 --></li>
 <li>2nd place in the Sequence Prediction Challenge (<a href="http://spice.lif.univ-mrs.fr/" target="_blank" rel="external">SPICE</a>), ICGI 2016</li>
 <li>Outstanding Graduate Award, Wuhan University of Technology, 2015</li>
 <li>Outstanding Undergraduate Dissertation Award, Wuhan University of Technology, 2015</li>
 <li>Meritorious Winner, The Mathematical Contest in Modeling (MCM), 2014<!-- + First prize for China Undergraduate Mathematical Contest in Modeling (CUMCM), Provincial Level, 2013 -->
+<!-- + University Scholarships, Wuhan University of Technology, 2011-2014 -->
 </li>
 </ul>
+<h2 id="Professional-Service"><a href="#Professional-Service" class="headerlink" title="Professional Service"></a>Professional Service</h2><ul>
+<li>Reviewer for the Neurocomputing Journal (2016, 2017)</li>
+<li>Volunteer at the ShanghaiTech Symposium on Information Science and Technology (<a href="http://ssist.shanghaitech.edu.cn/" target="_blank" rel="external">SSIST</a>), Jun 2016</li>
+</ul>
 <h2 id="Miscellaneous"><a href="#Miscellaneous" class="headerlink" title="Miscellaneous"></a>Miscellaneous</h2><ul>
-<li>Avatar photo was taken during my road bike trip around the <a href="https://en.wikipedia.org/wiki/Qinghai_Lake" target="_blank" rel="external">Qinghai Lake</a> in the summer of 2012.<!-- + Page style by courtesy of [xxx](#). -->
+<li>The avatar photo was taken during my road bike trip around the <a href="https://en.wikipedia.org/wiki/Qinghai_Lake" target="_blank" rel="external">Qinghai Lake</a> in the summer of 2012.<!-- + Page style by courtesy of [xxx](#). -->
 <!-- <table class="oops-table"><tbody> 
 <tr> <td class="oops-left">
 <ul>
