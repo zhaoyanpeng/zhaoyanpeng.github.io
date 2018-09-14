@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhaoyanpeng.cn/"/>
-  <updated>2017-06-21T12:30:18.292Z</updated>
+  <updated>2017-06-21T12:30:18.000Z</updated>
   <id>http://zhaoyanpeng.cn/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <title>CYK with Unary Rules</title>
     <link href="http://zhaoyanpeng.cn/2018/12/08/CYK-with-Unary-Rules/"/>
     <id>http://zhaoyanpeng.cn/2018/12/08/CYK-with-Unary-Rules/</id>
-    <published>2018-12-08T14:10:50.000Z</published>
-    <updated>2017-06-21T12:30:18.292Z</updated>
+    <published>2018-12-08T01:10:50.000Z</published>
+    <updated>2017-06-21T12:30:18.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Grammar-Rules"><a href="#Grammar-Rules" class="headerlink" title="Grammar Rules"></a>Grammar Rules</h1><p>$S$ or $R$ is used as the root node in the following discussion, so $O(S)=O(R)=1$.</p>
 <table>
@@ -214,15 +214,21 @@ c(E \rightarrow D) &= \sum_{T \sim w_{0}w_{1}w_{2} \text{ and } E \rightarrow D 
     <title></title>
     <link href="http://zhaoyanpeng.cn/2017/06/17/Index/"/>
     <id>http://zhaoyanpeng.cn/2017/06/17/Index/</id>
-    <published>2017-06-17T23:04:41.000Z</published>
-    <updated>2018-05-26T07:55:43.091Z</updated>
+    <published>2017-06-17T11:04:41.000Z</published>
+    <updated>2018-09-14T15:47:12.040Z</updated>
     
-    <content type="html"><![CDATA[<table class="oops-table"><tbody> <tr> <td style="text-align:left;width:40%;padding-left: 0;padding-bottom: 0;"> <img src="/images/yan.png" alt="Yanpeng Zhao (赵彦鹏)" width="100%" height="" ,=""></td> <td style="text-align:left; padding-left: 20px;"><h1 style="font-size:200%;margin: 0 0 10px 0">Yanpeng Zhao <span style="display: none !important;font-family:Baskerville; font-size:90%">(赵彦鹏)</span></h1><p style="font-size:120%;line-height: 1.2;margin: 0;padding: 0;"><!-- <b>M.Sc. </b> in <b>Computer Science</b> --><br> <b>ShanghaiTech University</b><br><br><b>Email</b>: <tt>zhaoyp1#shanghaitech$\cdot$edu$\cdot$cn</tt><br><b>Office</b>: 1A 306, SIST Building, ShanghaiTech Univ.<br><br>[<a href="#Publications">Publication</a>] [<a href="#Education">Education</a>] [<a href="#Experience">Experience</a>] [<a href="#Selected-Awards">Awards</a>] [<a href="/files/cv_zhao.pdf">Resume</a>]</p></td> </tr><!-- <tr> <td class="oops-left">col 1 is</td> <td style="text-align:left">Sep 2011 - Jun 2015</td> </tr> --></tbody></table>
+    <content type="html"><![CDATA[<!--
+<div style="display: table;"><div style="display: table-cell;vertical-align: middle;width: 100%;padding-left: 1px;padding-right: 1px;font-family: 'Times New Roman';font-size: 14px;"><div style="text-align:left;width:39%;padding-left: 0;margin: 0 20px 0 0;padding-bottom: 0;float: left;"> <img src="/images/yan.png" alt="Yanpeng Zhao (赵彦鹏)" width="100%" height="", > </div><div style="padding-left: 0;padding-right: 8px;float: left;text-align: left;height: 100%;"> <h1 style="font-size:200%;margin: 0 0 10px 0">Yanpeng Zhao <span style="display: none !important;font-family:Baskerville; font-size:90%">(赵彦鹏)</span></h1> <p style="font-size:120%;line-height: 1.2;margin: 0;padding: 0;"><br> <b>ShanghaiTech University</b><br><br><b>Email</b>: <tt>zhaoyp1#shanghaitech$\cdot$edu$\cdot$cn</tt><br><br><br>[[Publication](#Publications)] [[Education](#Education)] [[Experience](#Experience)] [[Awards](#Selected-Awards)] [[Resume](/files/cv_zhao.pdf)]</p> </div></div></div>
+-->
+<table class="oops-table"><tbody> <tr> <td style="text-align:left;width:40%;padding-left: 0;padding-bottom: 0;"> <img src="/images/yan.png" alt="Yanpeng Zhao (赵彦鹏)" width="100%" height="" ,=""></td> <td style="text-align:left; padding-left: 20px;"><h1 style="font-size:200%;margin: 0 0 10px 0">Yanpeng Zhao <span style="display: none !important;font-family:Baskerville; font-size:90%">(赵彦鹏)</span></h1><p style="font-size:120%;line-height: 1.2;margin: 0;padding: 0;"><!-- <b>M.Sc. </b> in <b>Computer Science</b> --><br> <b>ShanghaiTech University</b><br><br><b>Email</b>: <tt>zhaoyp1#shanghaitech$\cdot$edu$\cdot$cn</tt><br><!--<b>Office</b>: 1A-306, SIST Building, ShanghaiTech Univ.--><br><br>[<a href="#Publications">Publication</a>] [<a href="#Education">Education</a>] [<a href="#Experience">Experience</a>] [<a href="#Selected-Awards">Awards</a>] [<a href="/files/cv_zhao.pdf">Resume</a>]</p></td> </tr><!-- <tr> <td class="oops-left">col 1 is</td> <td style="text-align:left">Sep 2011 - Jun 2015</td> </tr> --></tbody></table>
 
 <p style="font-family: 'Times New Roman';line-height: 1.5;">Hi! I am a third-year M.Sc. student in the <a href="http://sist.shanghaitech.edu.cn/" target="_blank" rel="external">School of Information Science and Technology</a> at <a href="http://shanghaitech.edu.cn/" target="_blank" rel="external">ShanghaiTech University</a>, under the supervision of Prof. <a href="http://sist.shanghaitech.edu.cn/faculty/tukw/" target="_blank" rel="external">Kewei Tu</a>.<br>My research interests are in natural language processing (NLP) and machine learning (ML), with a focus on machine learning approaches to linguistic structure prediction and language understanding and generation.<br><!--<b>I will graduate in June, and I am looking for a research assistant job. Drop me an email if you are interested in my background and experience.</b>--></p>
 
-<h2 id="Current-Work"><a href="#Current-Work" class="headerlink" title="Current Work"></a>Current Work</h2><p style="font-family: 'Times New Roman';line-height: 1.5;">I’m studying constituency parsing with latent variables. We propose Latent Vector Grammars (LVeGs), a new constituency parsing framework, which models nonterminal subtypes in a high dimensional continuous space.</p>
+<!--
+## Current Work
 
+<p style="font-family: 'Times New Roman';line-height: 1.5;">I'm studying constituency parsing with latent variables. We propose Latent Vector Grammars (LVeGs), a new constituency parsing framework, which models nonterminal subtypes in a high dimensional continuous space.</p>
+-->
 <h2 id="Publications"><a href="#Publications" class="headerlink" title="Publications"></a>Publications</h2><p style="margin-top: 0;margin-bottom: 5px;"><strong><em>Journal Papers</em></strong></p>
 
 <ul>
@@ -272,7 +278,8 @@ Adviser: Kewei Tu</li>
     
     <summary type="html">
     
-      &lt;table class=&quot;oops-table&quot;&gt;&lt;tbody&gt; &lt;tr&gt; &lt;td style=&quot;text-align:left;width:40%;padding-left: 0;padding-bottom: 0;&quot;&gt; &lt;img src=&quot;/images/yan.png&quot; 
+      &lt;!--
+&lt;div style=&quot;display: table;&quot;&gt;&lt;div style=&quot;display: table-cell;vertical-align: middle;width: 100%;padding-left: 1px;padding-right: 1px;fo
     
     </summary>
     
@@ -283,8 +290,8 @@ Adviser: Kewei Tu</li>
     <title>Bayesian Network Structure Learning Code and Data Library</title>
     <link href="http://zhaoyanpeng.cn/2015/08/14/Bayesian-Network-Structure-Learning-Code-And-Data-Library/"/>
     <id>http://zhaoyanpeng.cn/2015/08/14/Bayesian-Network-Structure-Learning-Code-And-Data-Library/</id>
-    <published>2015-08-14T16:57:18.000Z</published>
-    <updated>2017-07-31T07:53:05.480Z</updated>
+    <published>2015-08-14T04:57:18.000Z</published>
+    <updated>2017-07-31T07:53:04.000Z</updated>
     
     <content type="html"><![CDATA[<p>This page contains some software packages of PGM, which were found during my research on BNSL (Bayesian Network Structure Learning).</p>
 <h1 id="BNSL-Source-Code-Library"><a href="#BNSL-Source-Code-Library" class="headerlink" title="BNSL Source Code Library"></a>BNSL Source Code Library</h1><h2 id="Weka"><a href="#Weka" class="headerlink" title="Weka"></a><a href="http://www.cs.waikato.ac.nz/ml/index.html" target="_blank" rel="external">Weka</a></h2><p><a href="http://weka.wikispaces.com/" target="_blank" rel="external">Weka Wiki</a>, Codes of BNSL in Weka lie in <code>weka.classifiers.bayes.net.search</code>. You can refer to <a href="">to be added</a> about the usage of Weka BNSL.</p>
@@ -327,8 +334,8 @@ Adviser: Kewei Tu</li>
     <title>Math Support for Hexo</title>
     <link href="http://zhaoyanpeng.cn/2015/04/11/Math-Support-for-Hexo/"/>
     <id>http://zhaoyanpeng.cn/2015/04/11/Math-Support-for-Hexo/</id>
-    <published>2015-04-11T17:53:52.000Z</published>
-    <updated>2017-06-21T11:47:10.004Z</updated>
+    <published>2015-04-11T05:53:52.000Z</published>
+    <updated>2017-06-21T11:47:10.000Z</updated>
     
     <content type="html"><![CDATA[<p><code>_</code> in Markdown conflicts with that in Latex, here is the solution to it:</p>
 <blockquote>
@@ -365,8 +372,8 @@ $$
     <title>A Beautiful Equation</title>
     <link href="http://zhaoyanpeng.cn/2015/04/04/A-Beautiful-Equation/"/>
     <id>http://zhaoyanpeng.cn/2015/04/04/A-Beautiful-Equation/</id>
-    <published>2015-04-04T21:27:46.000Z</published>
-    <updated>2017-06-21T11:45:41.432Z</updated>
+    <published>2015-04-04T09:27:46.000Z</published>
+    <updated>2017-06-21T11:45:40.000Z</updated>
     
     <content type="html"><![CDATA[<p>$${e \approx \left(1 + 9^{-4^{7 \times 6}}\right)^{3^{2^{85}}}}$$</p>
 ]]></content>
