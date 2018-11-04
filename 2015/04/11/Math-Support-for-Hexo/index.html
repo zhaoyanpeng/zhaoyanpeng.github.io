@@ -114,6 +114,7 @@
 <meta property="og:url" content="http://zhaoyanpeng.cn/2015/04/11/Math-Support-for-Hexo/index.html">
 <meta property="og:site_name" content="Yann&#39;s Pages">
 <meta property="og:description" content="_ in Markdown conflicts with that in Latex, here is the solution to it:  Hexo uses Nunjucks to render posts (Swig was used in older version, which share a similar syntax). Content wrapped with {{  }}">
+<meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2017-06-21T11:47:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Math Support for Hexo">
@@ -348,7 +349,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2015-04-11T13:53:52+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2015-04-11T13:53:52+01:00">
                 2015-04-11
               </time>
             
@@ -431,14 +432,14 @@
 <blockquote>
 <p>Hexo uses <a href="">Nunjucks</a> to render posts (<a href="">Swig</a> was used in older version, which share a similar syntax). Content wrapped with <code>{{  }}</code> or <code>{% %}</code>  will get parsed and may cause problems. You can wrap sensitive content with the raw tag plugin.</p>
 </blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;% raw %&#125;</div><div class="line">$$</div><div class="line">e^&#123;i \theta_&#123;t&#125;&#125; = \cos \theta_&#123;t&#125; + i \sin \theta_&#123;t&#125;</div><div class="line">$$</div><div class="line">&#123;% endraw %&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% raw %&#125;</span><br><span class="line">$$</span><br><span class="line">e^&#123;i \theta_&#123;t&#125;&#125; = \cos \theta_&#123;t&#125; + i \sin \theta_&#123;t&#125;</span><br><span class="line">$$</span><br><span class="line">&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure>
 <p>Results</p>
 
 $$
 e^{i \theta_{t}} = \cos \theta_{t} + i \sin \theta_{t}
 $$
 
-<p>Ref: <a href="https://hexo.io/docs/troubleshooting.html#Escape-Contents" target="_blank" rel="external">https://hexo.io/docs/troubleshooting.html#Escape-Contents</a></p>
+<p>Ref: <a href="https://hexo.io/docs/troubleshooting.html#Escape-Contents" target="_blank" rel="noopener">https://hexo.io/docs/troubleshooting.html#Escape-Contents</a></p>
 
       
     </div>
