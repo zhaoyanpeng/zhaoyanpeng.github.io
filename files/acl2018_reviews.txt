@@ -1,0 +1,350 @@
+Title: Gaussian Mixture Latent Vector Grammars 
+Authors: Yanpeng Zhao, Liwen Zhang and Kewei Tu 
+
+
+============================================================================ 
+ACL 2018 Reviews for Submission #1525
+============================================================================ 
+
+Title: Gaussian Mixture Latent Vector Grammars
+Authors: Yanpeng Zhao, Liwen Zhang and Kewei Tu
+============================================================================
+                            REVIEWER #1
+============================================================================
+
+---------------------------------------------------------------------------
+Reviewer's Scores
+---------------------------------------------------------------------------
+                         Appropriateness: Appropriate
+           Adhere to ACL 2018 Guidelines: Yes
+         Adhere to ACL Author Guidelines: Yes
+            Handling of Data / Resources: N/A
+          Handling of Human Participants: N/A
+
+Summary and Contributions
+---------------------------------------------------------------------------
+Summary:
+
+This paper presents a grammatical formalism called Gaussian Mixture
+Latent Vector Grammar, which can be seen as an extension of PCFG-LAs
+where non-terminals are enriched with a latent real vector.
+It can also be seen as an extension of CVGs.
+
+
+
+Rule weights are parameterized by mixtures of Gaussian distributions
+which gives a very rich and flexible scoring function.
+
+Experimentally, although the proposed prototype does not incorporate
+recent techniques to take context into account (such as RNN-based
+feature extraction), the results are very promising.
+
+
+Contribution 1:
+
+A new formalism that extends PCFG-LAs and makes an interesting attempt
+to bridge the gap between this well-known formalism and dense vector
+representations a la CVG.
+
+Contribution 2:
+
+Contribution 3:
+---------------------------------------------------------------------------
+
+
+Strengths
+---------------------------------------------------------------------------
+Strength argument 1:
+
+Very solid presentation of the formalism, with strong motivation and
+links to previous propositions.
+
+Strength argument 2:
+
+Strength argument 3:
+
+Strength argument 4:
+
+Strength argument 5:
+---------------------------------------------------------------------------
+
+
+Weaknesses
+---------------------------------------------------------------------------
+Weakness argument 1:
+
+Beyond intractability issues of exact decoding, it seems that the
+proposed approximation is still very complex, even with PCFG pruning
+and mixture pruning, and that it might not be usable outside
+proof-of-concept academic papers.
+
+
+Weakness argument 2:
+
+Weakness argument 3:
+
+Weakness argument 4:
+
+Weakness argument 5:
+---------------------------------------------------------------------------
+
+
+Questions to Authors (Optional)
+---------------------------------------------------------------------------
+Question 1:
+Can you give information about complexity of the approximation, and amount
+of time for training and decoding?
+
+Question 2:
+
+Approximate decoding is implemented using max-rule, where scores are
+normalized by the forest weight (noted s_I(S,1,n) in eq.9). What about
+the more exact normalization (called Variational in the PCFG-LA
+parlance) by the left-hand non terminal marginal score (s_I (A,i,j) \times
+s_O(A,i,j) )? It was experimentally inferior to max-rule with pcfg-las,
+is it the still the case with LVeGs?
+
+
+
+Question 3:
+---------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------
+Reviewer's Scores
+---------------------------------------------------------------------------
+                NLP Tasks / Applications: N/A
+                    Methods / Algorithms: N/A
+       Theoretical / Algorithmic Results: Strong contribution
+                       Empirical Results: Moderate contribution
+                        Data / Resources: N/A
+                      Software / Systems: N/A
+            Evaluation Methods / Metrics: N/A
+                     Other Contributions: N/A
+                       Originality (1-5): 4
+             Soundness/Correctness (1-5): 4
+                         Substance (1-5): 4
+                     Replicability (1-5): 3
+             Meaningful Comparison (1-5): 4
+                       Readability (1-5): 4
+                     Overall Score (1-6): 5
+
+
+============================================================================
+                            REVIEWER #2
+============================================================================
+
+---------------------------------------------------------------------------
+Reviewer's Scores
+---------------------------------------------------------------------------
+                         Appropriateness: Appropriate
+           Adhere to ACL 2018 Guidelines: Yes
+         Adhere to ACL Author Guidelines: Yes
+            Handling of Data / Resources: No
+          Handling of Human Participants: N/A
+
+Comments on Preliminary Checks
+---------------------------------------------------------------------------
+Handling of Data / Resources: Penn Treebank and Universal Dependencies Treebank are used without reference or URL. It is not stated whether a licence was obtained or is needed. (However, imho, the later should not be necessary in each paper. Suggestion: ACL publishes guidelines for ethical research and asks authors at submission to confirm that these have been followed.)
+---------------------------------------------------------------------------
+
+
+Summary and Contributions
+---------------------------------------------------------------------------
+Summary: Latent variable PCFGs are extended to allow infinitely many subtypes for each non-terminal parametrised by continuous vectors. An implementation that uses Gaussian mixtures (with some constraints) to score each fine-grained rule is presented and evaluated in parsing (English PTB) and POS tagging (UD treebank, 8 languages).
+
+Contribution 1: a new class of grammars
+
+Contribution 2: solutions to make an implementation with Gaussian mixtures feasible 
+
+Contribution 3: evaluation of the approach
+
+Contribution 4: illustration how LA-PCFG and compositional vector grammars are special cases
+---------------------------------------------------------------------------
+
+
+Strengths
+---------------------------------------------------------------------------
+Strength argument 1: theoretical description of a new class of grammars
+
+Strength argument 2: practical implementation solutions
+
+Strength argument 3: competitive results if comparing only to methods using no contextual information (higher scores in all but one test)
+
+Strength argument 4: 
+
+Strength argument 5:
+---------------------------------------------------------------------------
+
+
+Weaknesses
+---------------------------------------------------------------------------
+Weakness argument 1: no statistical significance testing
+
+Weakness argument 2: The description of the discrete case as a special case of the continuous case does not discuss that this makes a switch from a probability density function to a probability function. (The integral in line 189 is 0 if all but a finite number of points have 0 weight.)
+
+Weakness argument 3: Runtime is not discussed. The limited range of parameters explored suggests that the model is expensive to train and/or test.
+
+Weakness argument 4:
+
+Weakness argument 5:
+---------------------------------------------------------------------------
+
+
+Questions to Authors (Optional)
+---------------------------------------------------------------------------
+Question 1: How does speed compare to previous work?
+
+Question 2:
+
+Question 3:
+---------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------
+Reviewer's Scores
+---------------------------------------------------------------------------
+                NLP Tasks / Applications: N/A
+                    Methods / Algorithms: Strong contribution
+       Theoretical / Algorithmic Results: Moderate contribution
+                       Empirical Results: Moderate contribution
+                        Data / Resources: N/A
+                      Software / Systems: N/A
+            Evaluation Methods / Metrics: N/A
+                     Other Contributions: N/A
+                       Originality (1-5): 5
+             Soundness/Correctness (1-5): 4
+                         Substance (1-5): 4
+                     Replicability (1-5): 3
+             Meaningful Comparison (1-5): 5
+                       Readability (1-5): 5
+                     Overall Score (1-6): 6
+
+Additional Comments (Optional)
+---------------------------------------------------------------------------
+Overall score vs best paper consideration: While I think this paper can be the start to new work that will change how state of the art parsers operate, I don't put it forward for best paper because another paper I reviewed for this conference surpasses it in clarity and presentation and because there is no statistical significance testing of improvements.
+
+Line 119: would --> will
+
+148: would --> can or will
+
+178: (1) With this notation, theta needs to be part of G, making it a 6-tuple. In your notation, W tells the grammar what kind of functions are available but theta is needed to pick these functions. (2) Indexing both W and theta is unnecessary. Any information needed by W to select the desired function can be encoded in theta_{A->BC}. Suggestion: remove the index from W in line 178.5. This doesn't need to affect the convenience notation in line 181.5. 
+
+189: (1) What about the variables A and a? Should this equality hold for all A and for all a in subtypes(A) of which there are infinitely many? I think it will take readers a lot of thinking to take this in. A sentence explaining this would be helpful. (2) It will be useful for some applications to calculate the probability of coarse grained rules. Maybe include this in the supplement. (3) It might help readers to explain that a weight value is also not a probability after normalisation but a value of a probability density function. For typical models, the probability of every rule will be 0, similarly to the probability of picking a specific number from a uniform distribution of real numbers.
+
+196: with -> to ??
+
+200: latent discrete --> discrete latent 
+
+211-213: spelling of past tense of "split": split (this is one of the irregular verbs  in English)
+
+224: note that this means that the integral from line 189 will be zero and cannot be normalised to 1; moving from continuous back to discrete has some pitfalls
+
+323: not sure I parse this sentence correctly; does the main clause start with "r = "? Maybe start it with "GM-LVeG expects r = " instead for clarity.
+
+327-332: It might help some readers if you say what this means for the covariance matrix.
+
+390-393: no main clause; maybe replace ". In" --> ", in"
+
+393: remove comma after "slow"
+
+421: Where does the number 0.35 come from? Experiments? Intuition? Why not (k-kmin)^0.35?
+
+438: that --> the one
+
+530: remove space before punctuation
+
+562+577: No sentence --> We use / explore / test ...
+
+562: add reference Marcus et al. 1994
+
+562: suggestion for future work: constituent parsing in more languages can be tested with the SPMRL data set
+
+577: add reference; probably Nivre et al. LREC 2016 is most appropriate
+
+740-741: not English; suggestion: and therefore we leave important extensions to future work.
+
+769: remove full stop
+
+781: associates --> that associate
+
+section 6: use (or don't use) past tense consistently
+
+813: Published where?
+---------------------------------------------------------------------------
+
+
+
+============================================================================
+                            REVIEWER #3
+============================================================================
+
+---------------------------------------------------------------------------
+Reviewer's Scores
+---------------------------------------------------------------------------
+                         Appropriateness: Appropriate
+           Adhere to ACL 2018 Guidelines: Yes
+         Adhere to ACL Author Guidelines: Yes
+            Handling of Data / Resources: N/A
+          Handling of Human Participants: N/A
+
+Summary and Contributions
+---------------------------------------------------------------------------
+Summary: The paper proposes a new parsing framework using Latent vector grammars (LVeG). This framework is shown to be a generalization of famous Latent variable grammars (LVG) and Compositional vector grammars (CVG). To make learning and inference tractable, the paper makes use of Gaussian mixtures, which are closed under product, summation, and mariginalzation to compute weight functions. The experimental results show that LVeG outperforms LVG and CVG in both POS tagging and parsing on WSJ.
+
+Contribution 1: LVeG: new latent vector grammars that generalize both LVG and CVG 
+
+Contribution 2: Using Gaussian mixtures to make learning and inference tractable 
+
+Contribution 3: Higher accuracy compared to LVG and CVG
+---------------------------------------------------------------------------
+
+
+Strengths
+---------------------------------------------------------------------------
+Strength argument 1: The idea of using latent vectors for grammars is in the air. But this paper might be the first to make it as a general framework. 
+
+Strength argument 2: Using Gaussian mixtures for weight functions for parsing to make use of their properties of being closed under product, summation and marginalization is novel and creative. 
+
+Strength argument 3: The proposed parser outperforms CVG parser. The interesting point is that it doesn't use any contextual information, nor embeddings, promising even higher accuracy when integrating them. 
+
+Strength argument 4: The paper is well written.
+---------------------------------------------------------------------------
+
+
+Weaknesses
+---------------------------------------------------------------------------
+In general I don't have any strong argument to reject the paper. 
+
+Weakness argument 1: The proposed parser employs some tricks that I was wondering if they were essential for the high accuracy. For instance, the k_min for prunning Gaussian components, the two different prunning strategies for training and test (why not using only one strategy?)
+---------------------------------------------------------------------------
+
+
+Questions to Authors (Optional)
+---------------------------------------------------------------------------
+Question 1: Can we use EM to train GM-LveG? 
+
+Question 2:
+
+Question 3:
+---------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------
+Reviewer's Scores
+---------------------------------------------------------------------------
+                NLP Tasks / Applications: Strong contribution
+                    Methods / Algorithms: Strong contribution
+       Theoretical / Algorithmic Results: Strong contribution
+                       Empirical Results: Marginal contribution
+                        Data / Resources: N/A
+                      Software / Systems: N/A
+            Evaluation Methods / Metrics: N/A
+                     Other Contributions: N/A
+                       Originality (1-5): 4
+             Soundness/Correctness (1-5): 4
+                         Substance (1-5): 5
+                     Replicability (1-5): 4
+             Meaningful Comparison (1-5): 4
+                       Readability (1-5): 4
+                     Overall Score (1-6): 5
