@@ -159,8 +159,15 @@
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-101224917-1', 'auto');
+  ga('require', 'ipMeta', {
+      serviceProvider: 'dimension1',
+      networkDomain: 'dimension2',
+      networkType: 'dimension3',
+  });
+  ga('ipMeta:loadNetworkFields');
   ga('send', 'pageview');
 </script>
+<script async src="https://ipmeta.io/plugin.js"></script>
 
 
   <script type="text/javascript">
@@ -508,7 +515,7 @@
         <div class="copyright" >
   
   &copy;  2015 - 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
