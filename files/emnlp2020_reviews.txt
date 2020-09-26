@@ -1,0 +1,180 @@
+============================================================================ 
+EMNLP 2020 Reviews for Submission #2702
+============================================================================ 
+
+Title: Visually Grounded Compound PCFGs
+Authors: Yanpeng Zhao and Ivan Titov
+============================================================================
+                            META-REVIEW
+============================================================================ 
+
+Comments: This paper presents an end-to-end differentiable model with a probabilistic CFG for visually grounded grammar induction.  Reviewers agree that it is "A clear step forward" with "novel methods" and "strong improvement".
+
+============================================================================
+                            REVIEWER #1
+============================================================================
+
+What is this paper about, what contributions does it make, and what are the main strengths and weaknesses?
+---------------------------------------------------------------------------
+This paper presents an end-to-end differentiable model with a probabilistic CFG for visually grounded grammar induction. The results extend the work of Shi et al., 2019 and achieve better performance across syntax categories, where Shi's gains came almost exclusively from succeeding on NPs.
+
+A main strength of this paper is improvement on grounded, unsupervised grammar induction over prior work.
+
+A main weakness of this paper (which does affect my evaluation due to timing of publications) is not yet presenting the kinds of analysis performed in Kojima et al., ACL 2020 on the presented model.
+
+**Post-rebuttal: the authors may have space to run Kojima's bottleneck analysis, which would be great to see. The paper is already fine without it yet.
+---------------------------------------------------------------------------
+
+
+Reasons to accept
+---------------------------------------------------------------------------
+A clear step forward on visually grounded, unsupervised grammar induction, building on the (maybe sort of degenerate) solution presented in Shi et al., 2019.
+---------------------------------------------------------------------------
+
+
+Reasons to reject
+---------------------------------------------------------------------------
+Does not yet contain bottleneck analysis presented in Kojima et al., ACL 2020.
+---------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------
+Reviewer's Scores
+---------------------------------------------------------------------------
+                         Reproducibility: 3
+                  Overall Recommendation: 4.5
+
+Questions for the Author(s)
+---------------------------------------------------------------------------
+Kojima et al., ACL 2020 present a bottleneck analysis of Shi et al., 2019 and confirm the suspicion laid out in this paper that the latter is primarily learning concreteness of NPs and can thus only really get better at NPs. It would be -awesome- to see that analysis replicated in this paper for the proposed model, which almost certainly does not exhibit this same degenerate learning. Have the authors had time to run such an analysis since submission?
+---------------------------------------------------------------------------
+
+
+Missing References
+---------------------------------------------------------------------------
+"What is Learned in Visually Grounded Neural Syntax Acquisition" (https://arxiv.org/pdf/2005.01678.pdf). 
+```
+@InProceedings{Kojima2020:vgnsl,
+    title = "What is Learned in Visually Grounded Neural Syntax Acquisition",
+    author = "Noriyuki Kojima and Hadar Averbuch-Elor and Alexander Rush and Yoav Artzi",
+    booktitle = "Proceedings of the Annual Meeting of the Association for Computational Linguistics",
+    month = "July",
+    year = "2020",
+    publisher = "Association for Computational Linguistics",
+}
+```
+---------------------------------------------------------------------------
+
+
+Typos, Grammar, Style, and Presentation Improvements
+---------------------------------------------------------------------------
+- "Thus the image-text alignment loss will focus on small constituents." I think there could be some discussion here of potential limitations, since we can be arbitrarily specific and verbose when describing an image, that's just not the case in these datasets.
+
+- Table 1 typos? +/- 14 and +/- 25 really high variances maybe missing decimals.
+
+- Typo in conclusion "VC-PCFGs exploits"
+---------------------------------------------------------------------------
+
+
+
+============================================================================
+                            REVIEWER #2
+============================================================================
+
+What is this paper about, what contributions does it make, and what are the main strengths and weaknesses?
+---------------------------------------------------------------------------
+The paper considers the induction of unsupervised constituency grammars from image-sentence supervision. They re-implement the recently introduced compound PCFG approach from [1] and derive a novel image-sentence matching loss function to train it with multimodal supervision. The main novelty in the paper is the introduction of a matching objective to grammar induction. The approach is very expensive, however, due to the reliance of computing the representations for spans. Part of the novelty is to mitigate this issue. The authors simply represent spans using a BiLSTM and only compute the loss for short spans. Through experiments on the automatically parsed COCO and some hand-annotated examples they show that their novel image-sentence matching objective for inducing C-PCFGs improves over the approach of [1]. 
+
+
+[1] Kim, Y., Dyer, C., & Rush, A. M. (2019). Compound probabilistic context-free grammars for grammar induction.
+---------------------------------------------------------------------------
+
+
+Reasons to accept
+---------------------------------------------------------------------------
+The induction of C-PCFG based on the image-sentence matching is a novel idea and is worth putting it out there.
+---------------------------------------------------------------------------
+
+
+Reasons to reject
+---------------------------------------------------------------------------
+The reason why images improve the performance leaves me somewhat mystified. The model only uses a the marginals over short spans and the coefficient of the novel loss is only 0.001. Leaves me wondering whether training the encoder to do just image-sentence matching and training C-PCFG simply with the language modeling loss would also lead to improved results. see [2]
+
+Elliott, D., & Kádár, A. (2017). Imagination improves multimodal translation.
+---------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------
+Reviewer's Scores
+---------------------------------------------------------------------------
+                         Reproducibility: 4
+                  Overall Recommendation: 4.5
+
+
+============================================================================
+                            REVIEWER #3
+============================================================================
+
+What is this paper about, what contributions does it make, and what are the main strengths and weaknesses?
+---------------------------------------------------------------------------
+The paper wants to "unsupervised" learn a parse from image captioning dataset.
+The dataset does not contain the annotation of the parsing three but provide a paired image that the sentence is describing.
+
+The paper proposes to use a joint learning framework based on two losses: the expected constituent-image matching loss and the language model loss (the negative likelihood of the sentence). The matching loss is paramatrized by a multi-modal matching model. These two losses are originally non-differentiable. In order to optimize them, the LM loss is relaxed to ELBo. The matching loss is exactly computed with the help of pooling-based span representations.
+
+The results shows a strong improvement over the previous methods and proves the effectiveness of additional LM loss. The paper also illustrated a detailed study on how this LM loss helps.
+
+Overall, the paper is well-written and the methods are novel to me. My only concern is the generalizability of the learned parser to other language domains.
+---------------------------------------------------------------------------
+
+
+Reasons to accept
+---------------------------------------------------------------------------
+1. The paper proposes a novel methods to unsupervised learn a constituency parser from the image captioning dataset. It improves the previous method VG-NSL by considering language prior inherited in the compound PCFGs. A specific achievement is the elimination of head-initial inductive bias used in VG-NSL.
+
+2. The results show a strong improvement over previous unsupervised models on the MS COCO dataset. The paper also proves that this improvement comes from a better grounding of long spans, which is lead by a joint objective with LM loss.
+
+3. The paper is easy to read and well-formulated. The formulas are clear which I could understand the framework without seeing a model figure. 
+
+4. The exchange of double sum in Eqn (6) is impressive to me.
+---------------------------------------------------------------------------
+
+
+Reasons to reject
+---------------------------------------------------------------------------
+The paper interests me a lot and actually there is no reason to reject. I instead list one point here that confused me for a long time (since the release of VG-NSL).
+
+1. The parser is only evaluated on MS COCO corpus but did not show its transferability to other datasets.
+ 
+This evalution setup is inherited from the VG-NSL paper, where the VG-NSL paper claims that "....WSJ, which are not visually grounded and whose linguistic structures can hardly be induced by VG-NSL".  I agree with the large divergence between visually-grounded language and other types of languages. However, if this gap is intrinsic to this task, the application of parsers trained on vision+language domain would be limited. I think that this paper has a change to remedy this by applying the language-only loss on language corpus (e.g., PTB, Wiki). Moreover, the ground truth label of MS COCO comes from an "off-the-shelf constituency parser trained on WSJ", which "have around 95.65 F1 score on MS COCO". It equivalently say that "a model trained on WSJ could do well on MS COCO", thus shows that the WSJ domain and MS COCO domain are not disjoint. If the parse trained on MS COCO could not transfer back to WSJ, it might degrade the motivation of learning a parser on MS COCO.
+
+If the space allows in rebuttal, I am looking forward to the authors' opinion on the potential and generalization of VL-trained parser.
+
+
+-----------------------------------------------------
+
+The response did not provide a direct answer to my question but I would still support for its acceptance.
+The methods shown in this paper would be influential.
+---------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------
+Reviewer's Scores
+---------------------------------------------------------------------------
+                         Reproducibility: 4
+                  Overall Recommendation: 4.5
+
+Questions for the Author(s)
+---------------------------------------------------------------------------
+1. The span feature is a mean pooling of the inside hidden states. The feature might be dominated by its interior thus it might not be sensitive to the boundary but this kind of sensitivity is intuitive required in this task. I think that using f_k([h_i; avg(h_i, ..., h_j); h_j]) might be better?
+---------------------------------------------------------------------------
+
+
+Typos, Grammar, Style, and Presentation Improvements
+---------------------------------------------------------------------------
+1. Line 182, 183, 187, 188, missing right parentheses in formulas.
+2. Line 270, it might be c \in t from the context?
+3. In Sec 2.2, I think that it would be better to change all (v, c) to (c, v) to keep the order in the pair. 
+4. Line 268 and line 365,  to (v, w). These notations are OK to me as long as they are consistent in the whole paper (Line 265 uses (v, w); I personally think that (.,.) is a better notation since <.,.> usually represents the inner product in hilbert space.)
+5. Line 383, p_\theta(c \mid w)
+---------------------------------------------------------------------------
