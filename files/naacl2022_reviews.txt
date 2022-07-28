@@ -2,6 +2,7 @@ NAACL 2022 Submission (Number 834)
 Title: Connecting the Dots between Audio and Text without Parallel Data through Visual Knowledge Transfer
 Link: [https://openreview.net/forum?id=rCxlfuQGHbq]
 
+
 Meta Review of Paper22 by Area Chair ZdwH 
 ACL ARR 2022 January Paper22 Area Chair ZdwH
 25 Feb 2022ACL ARR 2022 January Paper22 Meta ReviewReaders: Paper22 Senior Area Chairs, Paper22 Area Chairs, Paper22 Authors, Paper22 Reviewers Submitted, Program Chairs
