@@ -1,0 +1,96 @@
+NAACL 2022 Submission (Number 834)
+Title: Connecting the Dots between Audio and Text without Parallel Data through Visual Knowledge Transfer
+Link: [https://openreview.net/forum?id=rCxlfuQGHbq]
+
+Meta Review of Paper22 by Area Chair ZdwH 
+ACL ARR 2022 January Paper22 Area Chair ZdwH
+25 Feb 2022ACL ARR 2022 January Paper22 Meta ReviewReaders: Paper22 Senior Area Chairs, Paper22 Area Chairs, Paper22 Authors, Paper22 Reviewers Submitted, Program Chairs
+
+Metareview:
+The aim of this paper is to provide an unified framework to project texts, images and audio representations into an common features space of embeddings. The authors employ a pre-trained model with transformers for audio-text classification.
+
+Summary Of Reasons To Publish:
+The study focuses on an emergent task that hasn't been fully investigate with a comprehensive state of the art analysis. The performances are fairly good for unsupervised models with a good analysis of the results and explanation of the hypothesis. This work could be helpful for the readers.
+
+Summary Of Suggested Revisions:
+The pre-training technique the authors used is not novel and the reliance are to long on appendices. I also was wondering, as pointed out by a reviewer, if there are justifications for using the ViT transformer as the audio encoder rather than.
+
+Overall Assessment: 4 = There are minor points that may be revised
+
+
+Official Review of Paper22 by Reviewer 5Tht 
+ACL ARR 2022 January Paper22 Reviewer 5Tht
+15 Feb 2022ACL ARR 2022 January Paper22 Official ReviewReaders: Program Chairs, Paper22 Senior Area Chairs, Paper22 Area Chairs, Paper22 Reviewers Submitted, Paper22 Authors
+
+Paper Summary:
+This paper proposes a method for audio-text alignment based on bi-modal image-text and image-audio representations rather than parallel audio-text data. The proposed system is capable of matching the performance of other zero-shot algorithms on competing annotation tasks.
+
+Summary Of Strengths:
+Comprehensive state of the art analysis
+Good analysis of the results, with a thorough explanation of the hypothesis. Will be very helpful for the readers.
+Summary Of Weaknesses:
+Heavy reliance on appendices
+Comments, Suggestions And Typos:
+Nothing major, figure/table captions are longer than needed and could be simplified, but nothing major.
+
+Overall Assessment: 4 = This paper represents solid work, and is of significant interest for the (broad or narrow) sub-communities that might build on it.
+Confidence: 4 = Quite sure. I tried to check the important points carefully. It's unlikely, though conceivable, that I missed something that should affect my ratings.
+Best Paper: No
+Needs Ethics Review: No
+Reproducibility: 3 = They could reproduce the results with some difficulty. The settings of parameters are underspecified or subjectively determined, and/or the training/evaluation data are not widely available.
+Datasets: 1 = No usable datasets submitted.
+Software: 1 = No usable software released.
+Author Identity Guess: 1 = I do not have even an educated guess about author identity.
+
+
+Official Review of Paper22 by Reviewer mnwm 
+ACL ARR 2022 January Paper22 Reviewer mnwm
+15 Feb 2022ACL ARR 2022 January Paper22 Official ReviewReaders: Program Chairs, Paper22 Senior Area Chairs, Paper22 Area Chairs, Paper22 Reviewers Submitted, Paper22 Authors
+
+Paper Summary:
+This paper presents a tri-modal pre-training technique with audio, visual and text data, without paired audio-text data. The authors use transformer based pre-trained visual and text encoders from the CLIP model. The audio encoder is trained using contrastive learning between audio and visual encodings on the Audioset data, where the visual encoder is fixed. Results on the Audioset and CLOTHO datasets show improved performance and audio classification and caption retrieval tasks. Additionally, the authors provide methods for unsupervised curation of audio-text data to further fine-tune the audio encoder and share comparisons on the unsupervised and full-supervised techniques.
+
+Summary Of Strengths:
+The key contribution from the authors is the unsupervised curation techniques for generating paired audio-text data for fine-tuning data after pre-training the audio encoder. The pre-training is performed with video as the pivot modality, with paired image-text data available from AudioSet. To train with paired audio-text data, they explore various ways of generation audio-text captions from the AudioSet data for fine-tuning the audio encoder with contrastive loss. All the proposed methods include using a CLIP model to retrieve captions; by varying the pool of captions that the model mines from, captions describing different aspects of the clips are used, which improve performance. Additionally, the authors have performed detailed ablation studies on various methods that provide useful insights for anyone working in the space.
+
+Summary Of Weaknesses:
+The pre-training technique the authors used is not novel; they build upon Wav2Clip, and extend the method to Transformer based models. Pivoting has already been shown to be helpful in Wav2Clip. The comparison to baseline methods seem inherently unfair since the number of model parameters may not be comparable, all the external methods that the authors use as baseline are CNN based audio encoders.
+
+Comments, Suggestions And Typos:
+How is the top-1 retrieval performance computed for image-audio pre-training?
+More details about the zero-shot classification on ESC50 and US8k datasets would be helpful. What is the superset of captions that the retrieval is done on? It is not clear how ‘prompting’ is used in practice.
+The reason provided for why random curation helps doesn’t seem convincing, specially since the pre-training of audio-encoder on AudioSet would have already projects audio embeddings closer to the VT space.
+Overall Assessment: 3 = Good: This paper makes a reasonable contribution, and might be of interest for some (broad or narrow) sub-communities, possibly with minor revisions.
+Confidence: 2 =  Willing to defend my evaluation, but it is fairly likely that I missed some details, didn't understand some central points, or can't be sure about the novelty of the work.
+Best Paper: No
+Needs Ethics Review: No
+Reproducibility: 4 = They could mostly reproduce the results, but there may be some variation because of sample variance or minor variations in their interpretation of the protocol or method.
+Datasets: 1 = No usable datasets submitted.
+Software: 1 = No usable software released.
+Author Identity Guess: 1 = I do not have even an educated guess about author identity.
+
+
+Official Review of Paper22 by Reviewer h11P 
+ACL ARR 2022 January Paper22 Reviewer h11P
+11 Feb 2022ACL ARR 2022 January Paper22 Official ReviewReaders: Program Chairs, Paper22 Senior Area Chairs, Paper22 Area Chairs, Paper22 Reviewers Submitted, Paper22 Authors
+
+Paper Summary:
+This study investigates aligning audio and texts through visual knowledge. Aligning texts to enviornmental soundscapes has signficant impications for enhanching machine perception, but paired audio-text datasets (mainly non-speech audio events) for training are rare. The authors develop a method of projecting texts, images and audio representations into the joint embedding space, using the abundant existing paired audio-image and image-text data. Even without paired text-audio data, the model still achieve promising performance on audio-text retrieveal.
+
+Summary Of Strengths:
+The study focuses on an emergent task that hasn't been fully investigated but important for machine perception.
+The core idea of this study is innovative and worthy of attention. It is a very good leverage of existing data and pre-trained models to solve the data scarce challenge. Using one modality as a proxy for training multimodal models could have implications for some future studies on unsupervised/weakly supervised learning.
+The performance is pretty good for unsupervised models, even bettern than supervised models in some metrics for Clotho.
+Very detailed documentation of experiments with lots of well controlled conditions. In addition to main results, many small conclusions on training and ablation are also provided.
+Summary Of Weaknesses:
+I was wondering if there are justifications for using the ViT transformer as the audio encoder rather than other architectures designed specifically for audio (e.g., conformer). ViT is optimized for CV tasks and might not be optimal for audio processing. The audio encoder were initiated with pretrained weights from the image encoder, but why not initiate weights from pre-trained audio encoders? Wouldn't it be even more helpful? Is it because the image encoder weights are already trained with image-text pairs?
+Comments, Suggestions And Typos:
+The writing is clear. The frequent use of abbreviations such as GL, GC, AC, etc... does slightly affect the flow of reading, as one has to refer back to Table 2 for their meanings. I understand that this is because of the complexity of the paper. But maybe more semantically transparent names could be used.
+Overall Assessment: 4 = This paper represents solid work, and is of significant interest for the (broad or narrow) sub-communities that might build on it.
+Confidence: 3 =  Pretty sure, but there's a chance I missed something. Although I have a good feel for this area in general, I did not carefully check the paper's details, e.g., the math or experimental design.
+Best Paper: No
+Needs Ethics Review: No
+Reproducibility: 4 = They could mostly reproduce the results, but there may be some variation because of sample variance or minor variations in their interpretation of the protocol or method.
+Datasets: 1 = No usable datasets submitted.
+Software: 1 = No usable software released.
+Author Identity Guess: 4 = From an allowed pre-existing preprint or workshop paper, I know/can guess at least one author's name.
